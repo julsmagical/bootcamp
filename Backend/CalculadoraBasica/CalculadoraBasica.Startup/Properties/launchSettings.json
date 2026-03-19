@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CalculadoraBasica.Startup": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
