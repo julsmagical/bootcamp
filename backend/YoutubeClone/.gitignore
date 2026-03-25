@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.DS_Store
+
+# Build Folders
+bin/
+obj/
+
+# Configs temporales
+*.dbmdl
+*.pdb
+*.cache
+*.log

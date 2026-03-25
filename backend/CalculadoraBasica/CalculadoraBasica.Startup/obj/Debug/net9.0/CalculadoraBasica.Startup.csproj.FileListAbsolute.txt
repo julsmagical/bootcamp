@@ -1,0 +1,14 @@
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\bin\Debug\net9.0\CalculadoraBasica.Startup.exe
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\bin\Debug\net9.0\CalculadoraBasica.Startup.deps.json
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\bin\Debug\net9.0\CalculadoraBasica.Startup.runtimeconfig.json
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\bin\Debug\net9.0\CalculadoraBasica.Startup.dll
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\bin\Debug\net9.0\CalculadoraBasica.Startup.pdb
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.dll
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\refint\CalculadoraBasica.Startup.dll
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.pdb
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\CalculadoraBasica.Startup.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\CalculadoraBasica\CalculadoraBasica.Startup\obj\Debug\net9.0\ref\CalculadoraBasica.Startup.dll

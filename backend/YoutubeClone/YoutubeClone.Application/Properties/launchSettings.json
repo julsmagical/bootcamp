@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "YoutubeClone.Application": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
