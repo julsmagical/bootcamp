@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zQzF3Zs0OYI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\TalentInsights.WebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.14\\microsoft.aspnetcore.openapi.9.0.14.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

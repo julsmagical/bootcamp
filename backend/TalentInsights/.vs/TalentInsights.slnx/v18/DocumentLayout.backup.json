@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB678267-E983-9C15-2253-39057D326F73}|TalentInsights.WebApp\\TalentInsights.WebApp.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.webapp\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB678267-E983-9C15-2253-39057D326F73}|TalentInsights.WebApp\\TalentInsights.WebApp.csproj|solutionrelative:talentinsights.webapp\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\services\\collaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\services\\collaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB678267-E983-9C15-2253-39057D326F73}|TalentInsights.WebApp\\TalentInsights.WebApp.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.webapp\\talentinsights.webapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CB678267-E983-9C15-2253-39057D326F73}|TalentInsights.WebApp\\TalentInsights.WebApp.csproj|solutionrelative:talentinsights.webapp\\talentinsights.webapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\models\\requests\\collaborator\\createcollaboratorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\models\\requests\\collaborator\\createcollaboratorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\helpers\\responsehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\helpers\\responsehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB678267-E983-9C15-2253-39057D326F73}|TalentInsights.WebApp\\TalentInsights.WebApp.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB678267-E983-9C15-2253-39057D326F73}|TalentInsights.WebApp\\TalentInsights.WebApp.csproj|solutionrelative:talentinsights.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.shared\\cache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|solutionrelative:talentinsights.shared\\cache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\interfaces\\services\\icollaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\interfaces\\services\\icollaboratorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\models\\requests\\collaborator\\changepasswordcollaboratorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\models\\requests\\collaborator\\changepasswordcollaboratorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\models\\requests\\collaborator\\getallcollaboratorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\models\\requests\\collaborator\\getallcollaboratorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\talentinsights.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\talentinsights.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.shared\\constants\\validationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|solutionrelative:talentinsights.shared\\constants\\validationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\asus\\source\\repos\\talentinsights\\talentinsights.application\\models\\dtos\\collaboratordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\models\\dtos\\collaboratordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResponseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Helpers\\ResponseHelper.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Helpers\\ResponseHelper.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Helpers\\ResponseHelper.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Helpers\\ResponseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:36:52.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TalentInsights.WebApp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\TalentInsights.WebApp.csproj",
+              "RelativeDocumentMoniker": "TalentInsights.WebApp\\TalentInsights.WebApp.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\TalentInsights.WebApp.csproj",
+              "RelativeToolTip": "TalentInsights.WebApp\\TalentInsights.WebApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-26T00:29:52.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CollaboratorController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\Controllers\\CollaboratorController.cs",
+              "RelativeDocumentMoniker": "TalentInsights.WebApp\\Controllers\\CollaboratorController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\Controllers\\CollaboratorController.cs",
+              "RelativeToolTip": "TalentInsights.WebApp\\Controllers\\CollaboratorController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T00:29:19.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cache.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\Cache.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Shared\\Cache.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\Cache.cs",
+              "RelativeToolTip": "TalentInsights.Shared\\Cache.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T00:28:17.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateCollaboratorRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Collaborator\\CreateCollaboratorRequest.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Models\\Requests\\Collaborator\\CreateCollaboratorRequest.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Collaborator\\CreateCollaboratorRequest.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Models\\Requests\\Collaborator\\CreateCollaboratorRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T22:35:37.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CollaboratorService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Services\\CollaboratorService.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Services\\CollaboratorService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Services\\CollaboratorService.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Services\\CollaboratorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T00:01:39.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "TalentInsights.WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.WebApp\\Program.cs",
+              "RelativeToolTip": "TalentInsights.WebApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T00:50:20.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ICollaboratorService.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Interfaces\\Services\\ICollaboratorService.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Interfaces\\Services\\ICollaboratorService.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Interfaces\\Services\\ICollaboratorService.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Interfaces\\Services\\ICollaboratorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:58:12.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChangePasswordCollaboratorRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Collaborator\\ChangePasswordCollaboratorRequest.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Models\\Requests\\Collaborator\\ChangePasswordCollaboratorRequest.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Collaborator\\ChangePasswordCollaboratorRequest.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Models\\Requests\\Collaborator\\ChangePasswordCollaboratorRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:54:56.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetAllCollaboratorRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Collaborator\\GetAllCollaboratorRequest.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Models\\Requests\\Collaborator\\GetAllCollaboratorRequest.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Collaborator\\GetAllCollaboratorRequest.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Models\\Requests\\Collaborator\\GetAllCollaboratorRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:53:09.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TalentInsights.Application",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\TalentInsights.Application.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
+              "RelativeToolTip": "TalentInsights.Application\\TalentInsights.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-25T23:30:00.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ValidationConstants.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "RelativeToolTip": "TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:18:56.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CollaboratorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\DTOs\\CollaboratorDTO.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Models\\DTOs\\CollaboratorDTO.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Application\\Models\\DTOs\\CollaboratorDTO.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Models\\DTOs\\CollaboratorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T22:38:21.059Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

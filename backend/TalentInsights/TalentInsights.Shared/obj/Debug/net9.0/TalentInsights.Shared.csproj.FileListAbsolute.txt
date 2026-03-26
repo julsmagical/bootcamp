@@ -1,0 +1,11 @@
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\bin\Debug\net9.0\TalentInsights.Shared.deps.json
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\bin\Debug\net9.0\TalentInsights.Shared.dll
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\bin\Debug\net9.0\TalentInsights.Shared.pdb
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\TalentInsights.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\TalentInsights.Shared.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\TalentInsights.Shared.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\TalentInsights.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\TalentInsights.Shared.dll
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\refint\TalentInsights.Shared.dll
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\TalentInsights.Shared.pdb
+C:\Users\ASUS\source\repos\TalentInsights\TalentInsights.Shared\obj\Debug\net9.0\ref\TalentInsights.Shared.dll
