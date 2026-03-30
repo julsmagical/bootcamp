@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj": {}
+    "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj": {
+    "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj",
         "projectName": "TalentInsights.Shared",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\TalentInsights\\TalentInsights.Shared\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
