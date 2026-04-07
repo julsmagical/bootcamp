@@ -7,7 +7,7 @@ namespace TalentInsights.Application.Models.Requests.Collaborator
     {
         [Required(ErrorMessage = ValidationConstants.REQUIRED)]
         [MaxLength(150, ErrorMessage = ValidationConstants.MAX_LENGTH)]
-        [MinLength(12, ErrorMessage = ValidationConstants.MIN_LENGTH)]
+        [MinLength(10, ErrorMessage = ValidationConstants.MIN_LENGTH)]
         public string FullName { get; set; } = null!;
 
         [MaxLength(255, ErrorMessage = ValidationConstants.MAX_LENGTH)]

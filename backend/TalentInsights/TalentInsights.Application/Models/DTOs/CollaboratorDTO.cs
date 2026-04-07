@@ -1,11 +1,11 @@
 ﻿namespace TalentInsights.Application.Models.DTOs
 {
-    public class CollaboratorDTO
+    public class CollaboratorDto
     {
         public Guid CollaboratorId { get; set; }
-        public string FullName { get; set; } = null!; //obligatorio
-        public string? GitlabProfile { get; set; } //puede ser null
-        public string Position { get; set; } = null!; //obligatorio
+        public string FullName { get; set; } = null!;
+        public string? GitlabProfile { get; set; }
+        public string Position { get; set; } = null!;
         public DateTime JoinedAt { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }

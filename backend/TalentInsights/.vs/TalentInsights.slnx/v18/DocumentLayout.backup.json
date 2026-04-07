@@ -1,10 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\",
+  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|c:\\users\\hp\\documents\\workspace\\bootcamp\\backend\\talentinsights\\talentinsights.shared\\constants\\validationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{565AD6BD-2550-6847-A60C-870A4A4DA1F2}|TalentInsights.WebApi\\TalentInsights.WebApi.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{565AD6BD-2550-6847-A60C-870A4A4DA1F2}|TalentInsights.WebApi\\TalentInsights.WebApi.csproj|solutionrelative:talentinsights.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.application\\models\\requests\\auth\\loginauthreuest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\models\\requests\\auth\\loginauthreuest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.application\\helpers\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\helpers\\tokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{565AD6BD-2550-6847-A60C-870A4A4DA1F2}|TalentInsights.WebApi\\TalentInsights.WebApi.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{565AD6BD-2550-6847-A60C-870A4A4DA1F2}|TalentInsights.WebApi\\TalentInsights.WebApi.csproj|solutionrelative:talentinsights.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.application\\models\\responses\\genericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA0D4785-A359-4AB3-4472-C8F92DF7E483}|TalentInsights.Application\\TalentInsights.Application.csproj|solutionrelative:talentinsights.application\\models\\responses\\genericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FD49579-58CD-4B73-9198-9D5ACD2C6DDE}|TalentInsights.Infrastructure\\TalentInsights.Infrastructure.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.infrastructure\\persistence\\sqlserver\\repositories\\collaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FD49579-58CD-4B73-9198-9D5ACD2C6DDE}|TalentInsights.Infrastructure\\TalentInsights.Infrastructure.csproj|solutionrelative:talentinsights.infrastructure\\persistence\\sqlserver\\repositories\\collaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65D8414F-0C85-4C94-A53A-4A9DDA8C4436}|TalentInsights.Domain\\TalentInsights.Domain.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.domain\\interfaces\\repositories\\icollaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65D8414F-0C85-4C94-A53A-4A9DDA8C4436}|TalentInsights.Domain\\TalentInsights.Domain.csproj|solutionrelative:talentinsights.domain\\interfaces\\repositories\\icollaboratorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.shared\\constants\\validationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DBA46BFB-129F-9081-4206-3D9F6488C2C8}|TalentInsights.Shared\\TalentInsights.Shared.csproj|solutionrelative:talentinsights.shared\\constants\\validationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{565AD6BD-2550-6847-A60C-870A4A4DA1F2}|TalentInsights.WebApi\\TalentInsights.WebApi.csproj|c:\\users\\hp\\documents\\workspace\\vmt-bootcamp\\backend\\talentinsights\\talentinsights.webapi\\controllers\\collaboratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{565AD6BD-2550-6847-A60C-870A4A4DA1F2}|TalentInsights.WebApi\\TalentInsights.WebApi.csproj|solutionrelative:talentinsights.webapi\\controllers\\collaboratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +54,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidationConstants.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\Constants\\ValidationConstants.cs",
-              "RelativeDocumentMoniker": "TalentInsights.Shared\\Constants\\ValidationConstants.cs",
-              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\Constants\\ValidationConstants.cs",
-              "RelativeToolTip": "TalentInsights.Shared\\Constants\\ValidationConstants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T15:26:46.571Z",
+              "WhenOpened": "2026-04-07T16:37:42.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:33:21.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginAuthReuest.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Auth\\LoginAuthReuest.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Models\\Requests\\Auth\\LoginAuthReuest.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Models\\Requests\\Auth\\LoginAuthReuest.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Models\\Requests\\Auth\\LoginAuthReuest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:34:14.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenHelper.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Helpers\\TokenHelper.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Helpers\\TokenHelper.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Helpers\\TokenHelper.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Helpers\\TokenHelper.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwCYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:10:11.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceCollectionExtension.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.WebApi\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeDocumentMoniker": "TalentInsights.WebApi\\Extensions\\ServiceCollectionExtension.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.WebApi\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeToolTip": "TalentInsights.WebApi\\Extensions\\ServiceCollectionExtension.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:03:48.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.WebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TalentInsights.WebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.WebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TalentInsights.WebApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:47:14.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenericResponse.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Models\\Responses\\GenericResponse.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Application\\Models\\Responses\\GenericResponse.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\Models\\Responses\\GenericResponse.cs",
+              "RelativeToolTip": "TalentInsights.Application\\Models\\Responses\\GenericResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:50:04.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CollaboratorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Infrastructure\\Persistence\\SqlServer\\Repositories\\CollaboratorRepository.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Infrastructure\\Persistence\\SqlServer\\Repositories\\CollaboratorRepository.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Infrastructure\\Persistence\\SqlServer\\Repositories\\CollaboratorRepository.cs",
+              "RelativeToolTip": "TalentInsights.Infrastructure\\Persistence\\SqlServer\\Repositories\\CollaboratorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:39:42.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICollaboratorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Domain\\Interfaces\\Repositories\\ICollaboratorRepository.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Domain\\Interfaces\\Repositories\\ICollaboratorRepository.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Domain\\Interfaces\\Repositories\\ICollaboratorRepository.cs",
+              "RelativeToolTip": "TalentInsights.Domain\\Interfaces\\Repositories\\ICollaboratorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:39:06.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ValidationConstants.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "RelativeDocumentMoniker": "TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "RelativeToolTip": "TalentInsights.Shared\\Constants\\ValidationConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:35:21.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CollaboratorsController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.WebApi\\Controllers\\CollaboratorsController.cs",
+              "RelativeDocumentMoniker": "TalentInsights.WebApi\\Controllers\\CollaboratorsController.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.WebApi\\Controllers\\CollaboratorsController.cs",
+              "RelativeToolTip": "TalentInsights.WebApi\\Controllers\\CollaboratorsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T16:26:42.238Z",
               "EditorCaption": ""
             }
           ]
