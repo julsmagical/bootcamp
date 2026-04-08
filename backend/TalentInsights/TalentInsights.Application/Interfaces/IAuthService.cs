@@ -5,6 +5,7 @@ namespace TalentInsights.Application.Interfaces
 {
     public interface IAuthService
     {
-        Task<GenericResponse<string>> Login(LoginAuthReuest model);
+        Task<GenericResponse<LoginAuthResponse>> Login(LoginAuthReuest model);
+        Task<GenericResponse<LoginAuthResponse>> Renew(RenewAuthRequest model);
     }
 }

@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using System.Text;
 using TalentInsights.Application.Helpers;
+using TalentInsights.Application.Interfaces;
 using TalentInsights.Application.Interfaces.Services;
 using TalentInsights.Application.Services;
 using TalentInsights.Domain.Database.SqlServer.Context;
@@ -24,6 +24,8 @@ namespace TalentInsights.WebApi.Extensions
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<ICollaboratorService, CollaboratorService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ICacheService, CacheService>();
         }
 
         /// <summary>
@@ -72,6 +74,8 @@ namespace TalentInsights.WebApi.Extensions
 
             services.AddAuth(configuration);
 
+            services.AddCache();
+
             await Initialize(services);
         }
 
@@ -117,27 +121,17 @@ namespace TalentInsights.WebApi.Extensions
                 builder.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(builder =>
             {
-                var issuer = Environment.GetEnvironmentVariable(ConfigurationConstants.JWT_ISSUER)
-                    ?? configuration[ConfigurationConstants.JWT_ISSUER]
-                    ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.JWT_ISSUER));
-
-                var audience = Environment.GetEnvironmentVariable(ConfigurationConstants.JWT_AUDIENCE)
-                    ?? configuration[ConfigurationConstants.JWT_AUDIENCE]
-                    ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.JWT_AUDIENCE));
-
-                var privateKey = Environment.GetEnvironmentVariable(ConfigurationConstants.JWT_PRIVATE_KEY)
-                    ?? configuration[ConfigurationConstants.JWT_PRIVATE_KEY]
-                    ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.JWT_PRIVATE_KEY));
+                var tokenConfiguration = TokenHelper.Configuration(configuration);
 
                 builder.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = issuer,
+                    ValidIssuer = tokenConfiguration.Issuer,
                     ValidateAudience = true,
-                    ValidAudience = audience,
+                    ValidAudience = tokenConfiguration.Audience,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(privateKey)),
+                    IssuerSigningKey = tokenConfiguration.SecurityKey,
                     ClockSkew = TimeSpan.Zero,
                 };
 
@@ -151,6 +145,11 @@ namespace TalentInsights.WebApi.Extensions
             });
 
             services.AddAuthorization();
+        }
+
+        public static void AddCache(this IServiceCollection services)
+        {
+            services.AddMemoryCache();
         }
     }
 }

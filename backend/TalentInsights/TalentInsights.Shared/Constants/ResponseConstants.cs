@@ -10,6 +10,7 @@ namespace TalentInsights.Shared.Constants
 
         // Auth
         public const string AUTH_TOKEN_NOT_FOUND = "El token no es correcto, expiró o no se argumentó";
+        public const string AUTH_USER_NOT_FOUND = "El usuario o contrasena incorrectos";
 
         public static string ErrorUnexpected(string traceId)
         {
