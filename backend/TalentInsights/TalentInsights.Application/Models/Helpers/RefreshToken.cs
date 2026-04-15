@@ -1,4 +1,4 @@
-﻿namespace TalentInsights.Application.Models.Helpers
+namespace TalentInsights.Application.Models.Helpers
 {
     public class RefreshToken
     {

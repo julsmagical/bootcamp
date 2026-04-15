@@ -3,13 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using TalentInsights.Application.Helpers;
-using TalentInsights.Application.Interfaces;
 using TalentInsights.Application.Interfaces.Services;
 using TalentInsights.Application.Services;
+using TalentInsights.Domain.Database.SqlServer;
 using TalentInsights.Domain.Database.SqlServer.Context;
 using TalentInsights.Domain.Exceptions;
 using TalentInsights.Domain.Interfaces.Repositories;
+using TalentInsights.Infrastructure.Persistence.SqlServer;
 using TalentInsights.Infrastructure.Persistence.SqlServer.Repositories;
+using TalentInsights.Shared;
 using TalentInsights.Shared.Constants;
 using TalentInsights.WebApi.Middlewares;
 
@@ -34,8 +36,25 @@ namespace TalentInsights.WebApi.Extensions
         /// <param name="services"></param>
         public static void AddRepositories(this IServiceCollection services)
         {
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ICollaboratorRepository, CollaboratorRepository>();
         }
+
+        public async static Task AddSMTP(this IServiceCollection services, IConfiguration configuration)
+        {
+            var host = configuration[ConfigurationConstants.SMTP_HOST]
+                ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.SMTP_HOST));
+            var from = configuration[ConfigurationConstants.SMTP_FROM]
+                ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.SMTP_FROM));
+            var port = Convert.ToInt32(configuration[ConfigurationConstants.SMTP_PORT] ?? "567");
+            var user = configuration[ConfigurationConstants.SMTP_USER]
+                ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.SMTP_USER));
+            var password = configuration[ConfigurationConstants.SMTP_PASSWORD]
+                ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.SMTP_PASSWORD));
+            var smtp = new SMTP(host, from, port, user, password);
+            services.AddSingleton(smtp);
+        }
+
 
 
         /// <summary>
@@ -44,6 +63,7 @@ namespace TalentInsights.WebApi.Extensions
         /// <param name="services"></param>
         public async static Task AddCore(this IServiceCollection services, IConfiguration configuration)
         {
+            await services.AddSMTP(configuration);
             services.AddControllers().ConfigureApiBehaviorOptions(options =>
             {
                 options.InvalidModelStateResponseFactory = (errorContext) =>
@@ -132,14 +152,14 @@ namespace TalentInsights.WebApi.Extensions
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = tokenConfiguration.SecurityKey,
-                    ClockSkew = TimeSpan.Zero,
+                    ClockSkew = TimeSpan.Zero
                 };
 
                 builder.Events = new JwtBearerEvents
                 {
                     OnChallenge = async context =>
                     {
-                        throw new UnathorizedException(ResponseConstants.AUTH_TOKEN_NOT_FOUND);
+                        throw new UnauthorizedException(ResponseConstants.AUTH_TOKEN_NOT_FOUND);
                     }
                 };
             });

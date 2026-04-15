@@ -2526,11 +2526,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
       "projectName": "TalentInsights.Application",
-      "projectPath": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
+      "projectPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2551,14 +2551,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Domain\\TalentInsights.Domain.csproj": {
-              "projectPath": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Domain\\TalentInsights.Domain.csproj"
+            "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Domain\\TalentInsights.Domain.csproj": {
+              "projectPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Domain\\TalentInsights.Domain.csproj"
             },
-            "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Infrastructure\\TalentInsights.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Infrastructure\\TalentInsights.Infrastructure.csproj"
+            "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Infrastructure\\TalentInsights.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Infrastructure\\TalentInsights.Infrastructure.csproj"
             },
-            "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj": {
-              "projectPath": "C:\\Users\\HP\\Documents\\workspace\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj"
+            "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj": {
+              "projectPath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Shared\\TalentInsights.Shared.csproj"
             }
           }
         }

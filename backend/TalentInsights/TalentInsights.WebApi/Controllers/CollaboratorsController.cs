@@ -7,11 +7,11 @@ namespace TalentInsights.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Administrator")] //esta linea se puede usar para cada funcion
     public class CollaboratorsController(ICollaboratorService collaboratorService) : ControllerBase
     {
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Admin, HR")]
+
         public async Task<IActionResult> Create([FromBody] CreateCollaboratorRequest model)
         {
             var srv = await collaboratorService.Create(model);
@@ -21,7 +21,6 @@ namespace TalentInsights.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] FilterColaboratorRequest model, [FromHeader] string authorization)
         {
-            var collaboratorId = User.FindFirst("CollaboratorId")?.Value;
             var srv = collaboratorService.Get(model);
             return Ok(srv);
         }
@@ -41,6 +40,7 @@ namespace TalentInsights.WebApi.Controllers
         }
 
         [HttpDelete("{id:guid}")]
+        [Authorize(Roles = "Admin, HR")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var srv = await collaboratorService.Delete(id);

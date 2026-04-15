@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -14,28 +14,28 @@ namespace TalentInsights.Application.Helpers
     public static class TokenHelper
     {
         public static readonly Random rnd = new();
-        public static string Create(Guid collaboratorId, IConfiguration configuration, ICacheService cacheService)
+        public static string Create(Guid collaboratorId, List<string> Roles, IConfiguration configuration, ICacheService cache)
         {
             var tokenConfiguration = Configuration(configuration);
             var signingCredentials = new SigningCredentials(tokenConfiguration.SecurityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                new Claim(ClaimConstants.COLLABORATOR_ID, collaboratorId.ToString()),
+                new Claim(ClaimsConstants.COLLABORATOR_ID, collaboratorId.ToString()),
+                new Claim(ClaimTypes.Role, Roles[0])
             };
 
             var securityToken = new JwtSecurityToken(
                 audience: tokenConfiguration.Audience,
                 issuer: tokenConfiguration.Issuer,
-                expires: tokenConfiguration.ExpirationDateTime,
+                expires: tokenConfiguration.Expiration,
                 signingCredentials: signingCredentials,
                 claims: claims
                 );
-
             var token = new JwtSecurityTokenHandler().WriteToken(securityToken);
 
-            var cacheKey = CacheHelper.AuthToken(token, tokenConfiguration.ExpirationTimeSpan);
-            cacheService.Create(cacheKey.Key, cacheKey.Expiration, token);
+            var cacheKey = CacheHelper.AuthTokenCreation(token, tokenConfiguration.ExpirationTimeSpan);
+            cache.Create(cacheKey.Key, cacheKey.Expiration, token);
 
             return token;
         }
@@ -43,7 +43,7 @@ namespace TalentInsights.Application.Helpers
         public static string CreateRefresh(Guid collaboratorId, IConfiguration configuration, ICacheService cacheService)
         {
             var token = Generate.RandomText(100);
-            var cacheKey = CacheHelper.AuthRefreshToken(token, configuration);
+            var cacheKey = CacheHelper.AuthRefreshTokenCreation(token, configuration);
 
             cacheService.Create(cacheKey.Key, cacheKey.Expiration, new RefreshToken
             {
@@ -52,14 +52,13 @@ namespace TalentInsights.Application.Helpers
             });
 
             return token;
-            //var expirationSpan = TimeSpan.FromDays(Convert.ToInt32(configuration[ConfigurationConstants.AUTH_REFRESH_TOKEN_EXPIRATION_IN_DAYS] ??)
         }
 
         public static TokenConfiguration Configuration(IConfiguration configuration)
         {
             var issuer = Environment.GetEnvironmentVariable(ConfigurationConstants.JWT_ISSUER)
-                    ?? configuration[ConfigurationConstants.JWT_ISSUER]
-                    ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.JWT_ISSUER));
+                ?? configuration[ConfigurationConstants.JWT_ISSUER]
+                ?? throw new Exception(ResponseConstants.ConfigurationPropertyNotFound(ConfigurationConstants.JWT_ISSUER));
 
             var audience = Environment.GetEnvironmentVariable(ConfigurationConstants.JWT_AUDIENCE)
                 ?? configuration[ConfigurationConstants.JWT_AUDIENCE]
@@ -72,17 +71,17 @@ namespace TalentInsights.Application.Helpers
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(privateKey));
 
             var now = DateTimeHelper.UtcNow();
-            var randomEXPIRATION = rnd.Next(Convert.ToInt32(configuration[ConfigurationConstants.JWT_EXPIRATION_IN_MINUTES_MIN]), Convert.ToInt32(configuration[ConfigurationConstants.JWT_EXPIRATION_IN_MINUTES_MAX]));
-            var timeSpanExpiration = TimeSpan.FromMinutes(randomEXPIRATION);
-            var dateTimeExpiration = now.Add(TimeSpan.FromMinutes(randomEXPIRATION));
+            var randomExpiration = rnd.Next(Convert.ToInt32(configuration[ConfigurationConstants.JWT_EXPIRATION_IN_MINUTES_MIN] ?? "1"), Convert.ToInt32(configuration[ConfigurationConstants.JWT_EXPIRATION_IN_MINUTES_MAX] ?? "5"));
+            var timespanExpiration = TimeSpan.FromMinutes(randomExpiration);
+            var datetimeExpiration = now.Add(TimeSpan.FromMinutes(randomExpiration));
 
             return new TokenConfiguration
             {
                 Issuer = issuer,
                 Audience = audience,
                 SecurityKey = securityKey,
-                ExpirationDateTime = dateTimeExpiration,
-                ExpirationTimeSpan = timeSpanExpiration
+                Expiration = datetimeExpiration,
+                ExpirationTimeSpan = timespanExpiration
             };
         }
     }
