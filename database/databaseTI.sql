@@ -18,7 +18,7 @@ GO
 -- ============================================================
 CREATE TABLE Collaborators (
     Id            UNIQUEIDENTIFIER   NOT NULL DEFAULT NEWID(),
-    Email         NVARCHAR(100)      NOT NULL,
+    Email         NVARCHAR(100)      NOT NULL UNIQUE,
     FullName      NVARCHAR(150)      NOT NULL,
     GitlabProfile NVARCHAR(255)      NULL,
     Position      NVARCHAR(100)      NOT NULL,
@@ -478,3 +478,20 @@ CREATE INDEX IX_RolePermissions_PermissionId       ON RolePermissions (Permissio
 CREATE INDEX IX_CollaboratorRoles_RoleId           ON CollaboratorRoles (RoleId);
 CREATE INDEX IX_CollaboratorRoles_AssignedBy       ON CollaboratorRoles (AssignedBy);
 GO
+
+CREATE TABLE EmailTemplates (
+	EmailTemplateId INT IDENTITY(1, 1) NOT NULL,
+	Name VARCHAR(100) NOT NULL,
+	Subject VARCHAR(255) NOT NULL,
+	Body TEXT NOT NULL,
+	CreatedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+);
+GO
+
+INSERT INTO EmailTemplates (Name, Subject, Body)
+VALUES
+('COLLABORATOR_REGISTER', 'Registro de usuario - Talent Insights', 'Se creo una cuenta con su correo. Su clave es: <strong>{{password}}}</strong>'),
+('AUTH_LOGIN_SUCCESS', 'Inicio de sesión exitoso - Talent Insights', 'Se inicio sesión en su cuenta a las <strong>{{datetime}}</strong>'),
+('AUTH_LOGIN_FAILED', 'Inicio de sesión fallido - Talent Insights', 'Se intentó sesión en su cuenta, si no fue usted quien realizó esta acción, comuniquese con el administrador');
+
+SELECT * FROM EmailTemplates

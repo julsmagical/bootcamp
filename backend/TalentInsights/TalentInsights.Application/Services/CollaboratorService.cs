@@ -153,6 +153,7 @@ namespace TalentInsights.Application.Services
                 ]
             });
 
+            //var template EmailTemplate = EmailTemplateService.Get(EmailTemplateConstants.COLLABORATOR_REGISTER, new Dictio
             await uow.SaveChangesAsync();
         }
     }

@@ -20,6 +20,8 @@ public partial class TalentInsightsContext : DbContext
 
     public virtual DbSet<CollaboratorSkill> CollaboratorSkills { get; set; }
 
+    public virtual DbSet<EmailTemplate> EmailTemplates { get; set; }
+
     public virtual DbSet<Menu> Menus { get; set; }
 
     public virtual DbSet<MenuPermission> MenuPermissions { get; set; }
@@ -48,6 +50,8 @@ public partial class TalentInsightsContext : DbContext
     {
         modelBuilder.Entity<Collaborator>(entity =>
         {
+            entity.HasIndex(e => e.Email, "UQ__Collabor__A9D10534EE97CB66").IsUnique();
+
             entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("(sysutcdatetime())");
             entity.Property(e => e.Email).HasMaxLength(100);
@@ -116,6 +120,21 @@ public partial class TalentInsightsContext : DbContext
             entity.HasOne(d => d.Skill).WithMany(p => p.CollaboratorSkills)
                 .HasForeignKey(d => d.SkillId)
                 .HasConstraintName("FK_CollaboratorSkills_Skill");
+        });
+
+        modelBuilder.Entity<EmailTemplate>(entity =>
+        {
+            entity.HasNoKey();
+
+            entity.Property(e => e.Body).HasColumnType("text");
+            entity.Property(e => e.CreatedAt).HasDefaultValueSql("(sysutcdatetime())");
+            entity.Property(e => e.EmailTemplateId).ValueGeneratedOnAdd();
+            entity.Property(e => e.Name)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.Subject)
+                .HasMaxLength(255)
+                .IsUnicode(false);
         });
 
         modelBuilder.Entity<Menu>(entity =>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ikwrk9XQ4y8=",
+  "dgSpecHash": "h0D6OnOV+M4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\vmt-bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Documents\\workspace\\Bootcamp\\backend\\TalentInsights\\TalentInsights.Application\\TalentInsights.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
