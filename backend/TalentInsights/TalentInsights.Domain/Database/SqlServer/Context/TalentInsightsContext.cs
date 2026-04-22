@@ -50,7 +50,7 @@ public partial class TalentInsightsContext : DbContext
     {
         modelBuilder.Entity<Collaborator>(entity =>
         {
-            entity.HasIndex(e => e.Email, "UQ__Collabor__A9D10534EE97CB66").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Collabor__A9D105343FB487E9").IsUnique();
 
             entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("(sysutcdatetime())");

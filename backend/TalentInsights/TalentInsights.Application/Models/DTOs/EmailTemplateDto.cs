@@ -1,9 +1,9 @@
-﻿namespace TalentInsights.Application.Models.DTOs
+namespace TalentInsights.Application.Models.DTOs
 {
-    public class EmailTemplateDto
-    {
-        public string Subject { get; set; } = null!;
+	public class EmailTemplateDto
+	{
+		public string Subject { get; set; } = null!;
 
-        public string Body { get; set; } = null!;
-    }
+		public string Body { get; set; } = null!;
+	}
 }

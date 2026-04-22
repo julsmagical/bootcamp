@@ -1,9 +1,12 @@
 using Scalar.AspNetCore;
 using Serilog;
+using TalentInsights.Infrastructure.Workers;
 using TalentInsights.WebApi.Extensions;
 using TalentInsights.WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHostedService<TimerNotifyWorker>();
 
 builder.Host.UseSerilog();
 await builder.Services.AddCore(builder.Configuration);
@@ -13,12 +16,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-	app.MapScalarApiReference(options =>
-	{
-		options.Theme = ScalarTheme.Mars;
-		options.WithTitle("Talent Insights");
-	});
-	app.MapOpenApi();
+    app.MapScalarApiReference(options =>
+    {
+        options.Theme = ScalarTheme.Mars;
+        options.WithTitle("Talent Insights");
+    });
+    app.MapOpenApi();
 }
 
 app.UseMiddleware<ErrorHandlerMiddleware>();

@@ -5,111 +5,84 @@ using TalentInsights.Domain.Interfaces.Repositories;
 
 namespace TalentInsights.Infrastructure.Persistence.SqlServer.Repositories
 {
-    public class CollaboratorRepository(TalentInsightsContext context) : ICollaboratorRepository
-    {
-        public async Task<Collaborator> Create(Collaborator collaborator)
-        {
-            try
-            {
-                // insert
-                await context.Collaborators.AddAsync(collaborator);
+	public class CollaboratorRepository(TalentInsightsContext context) : GenericRepository<Collaborator>(context), ICollaboratorRepository
+	{
+		public async Task<bool> ClearRoles(List<CollaboratorRole> roles)
+		{
+			context.CollaboratorRoles.RemoveRange(roles);
+			return true;
+		}
 
-                return collaborator;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+		public async Task<Collaborator?> Get(Guid collaboratorId)
+		{
+			try
+			{
+				return await context.Collaborators
+					.Include(collaborator => collaborator.CollaboratorRoleCollaborators)
+					.ThenInclude(collaboratorRoles => collaboratorRoles.Role)
+					.FirstOrDefaultAsync(x => x.Id == collaboratorId && x.DeletedAt == null);
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 
-        public async Task<Role?> GetRole(string name)
-        {
-            return await context.Roles.FirstOrDefaultAsync(x => x.Name == name);
-        }
+		public async Task<Collaborator?> Get(string email)
+		{
+			try
+			{
+				return await context.Collaborators
+					.Include(collaborator => collaborator.CollaboratorRoleCollaborators)
+					.ThenInclude(collaboratorRoles => collaboratorRoles.Role)
+					.FirstOrDefaultAsync(x => x.Email == email && x.DeletedAt == null);
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 
-        public async Task<Role?> GetRole(Guid id)
-        {
-            return await context.Roles.FirstOrDefaultAsync(x => x.Id == id);
-        }
+		public async Task<List<Menu>> GetMenu(Guid collaboratorId)
+		{
+			var permissions = await context.CollaboratorRoles
+				.Where(cr => cr.CollaboratorId == collaboratorId)
+				.Join(context.RolePermissions,
+					cr => cr.RoleId,
+					rp => rp.RoleId,
+					(cr, rp) => rp.PermissionId)
+				.ToListAsync();
 
-        public async Task<Collaborator?> Get(Guid collaboratorId)
-        {
-            try
-            {
-                return await context.Collaborators.FirstOrDefaultAsync(x => x.Id == collaboratorId && x.DeletedAt == null);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
 
-        public async Task<Collaborator?> Get(string email)
-        {
-            try
-            {
-                return await context.Collaborators
-                    .Include(x => x.CollaboratorRoleCollaborators)
-                    .ThenInclude(collaboratorRoles => collaboratorRoles.Role)
-                    .FirstOrDefaultAsync(x => x.Email == email && x.DeletedAt == null);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+			return await context.Menus
+				.Where(m => m.MenuPermissions.Any(mp => permissions.Contains(mp.PermissionId)) &&
+					m.IsVisible &&
+					m.IsActive)
+				.OrderBy(m => m.ParentId)
+				.ThenBy(m => m.SortOrder)
+				.ToListAsync();
+		}
 
-        public async Task<bool> HasCreated()
-        {
-            try
-            {
-                return await context.Collaborators.AnyAsync();
-            }
-            catch
-            {
-                throw;
-            }
-        }
+		public async Task<Role?> GetRole(string name)
+		{
+			return await context.Roles.FirstOrDefaultAsync(x => x.Name == name);
+		}
 
-        public async Task<bool> IfExists(Guid collaboratorId)
-        {
-            try
-            {
-                return await context.Collaborators.AnyAsync(x => x.Id == collaboratorId);
-            }
-            catch (Exception)
-            {
+		public async Task<Role?> GetRole(Guid id)
+		{
+			return await context.Roles.FirstOrDefaultAsync(x => x.Id == id);
+		}
 
-                throw;
-            }
-        }
-
-        public IQueryable<Collaborator> Queryable()
-        {
-            try
-            {
-                return context.Collaborators.Where(x => x.DeletedAt == null).AsQueryable();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public async Task<Collaborator> Update(Collaborator collaborator)
-        {
-            try
-            {
-                context.Collaborators.Update(collaborator);
-
-                return collaborator;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-    }
+		public async Task<bool> HasCreated()
+		{
+			try
+			{
+				return await context.Collaborators.AnyAsync();
+			}
+			catch
+			{
+				throw;
+			}
+		}
+	}
 }
