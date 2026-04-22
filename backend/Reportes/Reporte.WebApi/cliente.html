@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliente</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+</head>
+
+<body>
+    <div id="order"></div>
+
+    <form>
+        <button type="button" id="generateReport">Crear reporte</button>
+    </form>
+
+    <script>
+        const BASE_URL = "http://localhost:5281";
+        const generateReport = document.getElementById("generateReport");
+        const container = document.getElementById("order");
+
+        generateReport.addEventListener("click", () => {
+            fetch(`${BASE_URL}/reportes/crear`, {
+                method: "POST",
+                body: JSON.stringify({
+                    name: "mi reporte",
+                    tipo: "ventas"
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+        });
+
+        (async () => {
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("http://localhost:5281/hub/order")
+                .withAutomaticReconnect()
+                .build();
+
+            await connection.start();
+
+            connection.on("OrderStatusUpdated", (data) => {
+                container.innerHTML += `
+                    <div>
+                        <span>${data.id}</span>
+                        <h1>${data.name}</h1>
+                        <span>${data.status}</span>
+                    </div>
+                `;
+            });
+        })();
+    </script>
+</body>
+</html>
