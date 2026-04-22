@@ -1,4 +1,6 @@
 using Reporte.WebApi.Channels;
+using Reporte.WebApi.Classes;
+using Reporte.WebApi.Models.DTO;
 using Reporte.WebApi.Workers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,9 @@ builder.Services.AddOpenApi();
 
 // Canales
 builder.Services.AddSingleton<ReportChannel>();
+
+// Cache
+builder.Services.AddSingleton<Cache<OrderDTO>>();
 
 // Agregar worker
 builder.Services.AddHostedService<GeneradorReportesWorker>();
