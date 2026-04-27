@@ -1,0 +1,32 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px; color:rgb(38, 2, 85);
+}
+
+header{
+    background-color:rgb(175, 138, 223);
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 20px;
+    display: flex;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    color:rgb(38, 2, 85);
+    display: flex;
+    padding: 10px;
+} 
+
+img {
+    display: block;
+    width: 5%;
+}
+
+p {
+    display: flex;
+    text-align:left;
+}

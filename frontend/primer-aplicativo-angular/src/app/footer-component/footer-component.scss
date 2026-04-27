@@ -1,0 +1,21 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:rgb(38, 2, 85);
+}
+
+footer {
+  background-color: rgb(175, 138, 223);
+  border-radius: 25px;
+  padding: 20px;
+  text-align:left;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    display: flex;
+    padding: 10px;
+}
