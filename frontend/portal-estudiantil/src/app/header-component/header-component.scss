@@ -1,0 +1,30 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+header{
+    display: flex;
+    background-color: rgb(146, 154, 255);
+    padding: 15px 20px;
+}
+
+.header-list{
+    display: flex;
+}
+
+.header-item {
+    list-style: none;
+    display: flex;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+}
+
+.conectado {
+    color:aqua;
+}
+
+.desconectado{
+    color: gray;
+}
+

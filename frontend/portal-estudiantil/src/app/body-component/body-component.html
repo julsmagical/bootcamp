@@ -1,0 +1,25 @@
+<h2>Materias</h2>
+<input [(ngModel)]="busqueda">
+<p>Buscando: {{busqueda}}</p>
+
+@for (materia of materias; track materia.nombre) {
+<li [class.aprobada] = "materia.aprobada"
+    [class.reprobada] = "!materia.aprobada" >
+    {{materia.nombre}}: {{materia.creditos}}
+</li>
+} @empty {
+    <p>No hay materias registradas</p>
+}
+
+<h2>Barra de progreso creditos</h2>
+    <div class="barra-contenedor">
+        <div class="barra-progreso"
+        [style.width.%]="porcentaje"
+        [style.background]="colorBarra">
+        </div>
+    </div>
+
+    <p>{{creditos}}/120 creditos totales</p>
+
+<button (click)="sumaCreditos()">+10 creditos</button>
+<button (click)="restaCreditos()">-10 creditos</button>

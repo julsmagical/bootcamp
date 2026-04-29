@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(204, 206, 235);;
+}
+
+h1, h2{
+    margin-bottom: 10px;
+}
+
+.aprobada{
+    color: green;
+}
+
+.reprobada{
+    color: red;
+}
+
+.barra-contenedor{
+    width: 100;
+    height: 25px;
+    background-color:aquamarine;
+}
+
+.barra-progreso{
+    width: 100;
+    height: 25px;
+    background-color: green;
+}
+
+
