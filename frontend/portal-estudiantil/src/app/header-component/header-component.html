@@ -1,6 +1,11 @@
 <header>
         <ul class="header-item">
-                <li> Bienvenido a {{appNombre}}, {{estudianteNombre}}.</li>
-                <button (click)="conectar()"> conectado </button>
+                <li>Bienvenido a {{appNombre}}</li>
+                <button (click)="conectar()" class = "header-button"> conectado </button>
+                @if(conectado){
+                     <li>Ha iniciado como: <span class="conectado">{{estudianteNombre}}.</span></li>   
+                }@else{
+                     <li>Ha iniciado como: <span class="desconectado">{{estudianteNombre}}.</span></li>     
+                }
         </ul>
 </header>
