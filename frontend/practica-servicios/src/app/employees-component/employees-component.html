@@ -1,4 +1,7 @@
 <h2>Employees</h2>
+<h3>Buscar por el id: </h3>
+<input [(ngModel)]="buscarId">
+
 @if (loading) {
     <div>Cargando...</div>
 }
@@ -8,15 +11,17 @@
 @if (!loading && !error) {
     <ul>
     @for (employee of employees; track employee.id) {
-        <h3>Id: <strong>{{ employee.id }}</strong></h3>
-        <li>Name: <strong>{{ employee.name }}</strong></li>
-        <li>Avatar: <strong>{{ employee.avatar }}</strong></li>
-        <li>Email: <strong>{{ employee.email }}</strong></li>
-        <li>Phone: <strong>{{ employee.phone }}</strong></li>
-        <li>Position: <strong>{{ employee.position }}</strong></li>
-        <li>Department: <strong>{{ employee.department }}</strong></li>
-        <li>Salary: <strong>{{ employee.salary }}</strong></li>
-        <li>Created At: <strong>{{ employee.createdAt }}</strong></li>
+        @if(!buscarId || employee.id === buscarId){
+            <h3>Id: <strong>{{ employee.id }}</strong></h3>
+            <li>Name: <strong>{{ employee.name }}</strong></li>
+            <li>Avatar: <strong>{{ employee.avatar }}</strong></li>
+            <li>Email: <strong>{{ employee.email }}</strong></li>
+            <li>Phone: <strong>{{ employee.phone }}</strong></li>
+            <li>Position: <strong>{{ employee.position }}</strong></li>
+            <li>Department: <strong>{{ employee.department }}</strong></li>
+            <li>Salary: <strong>{{ employee.salary }}</strong></li>
+            <li>Created At: <strong>{{ employee.createdAt }}</strong></li>
+        }
     }
     </ul>
 }

@@ -1,16 +1,18 @@
 import { inject, Component } from '@angular/core';
 import { DepartmentsServices } from '../services/departments';
 import { IDepartments } from '../interfaces/departments';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-departments-component',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './departments-component.html',
   styleUrl: './departments-component.scss',
 })
 export class DepartmentsComponent {
   private _departmentService = inject(DepartmentsServices);
   departments: IDepartments[] = []; 
+  buscarId: string = '';
   loading = false; 
   error = '';
 
