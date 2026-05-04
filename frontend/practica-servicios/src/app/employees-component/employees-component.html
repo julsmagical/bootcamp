@@ -14,7 +14,7 @@
         @if(!buscarId || employee.id === buscarId){
             <h3>Id: <strong>{{ employee.id }}</strong></h3>
             <li>Name: <strong>{{ employee.name }}</strong></li>
-            <li>Avatar: <strong>{{ employee.avatar }}</strong></li>
+            <li><img [src]="employee.avatar" width="60"></li>
             <li>Email: <strong>{{ employee.email }}</strong></li>
             <li>Phone: <strong>{{ employee.phone }}</strong></li>
             <li>Position: <strong>{{ employee.position }}</strong></li>
