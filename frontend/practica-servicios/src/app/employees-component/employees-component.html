@@ -1,6 +1,6 @@
-<h2>Employees</h2>
-<h3>Buscar por el id: </h3>
-<input [(ngModel)]="buscarId">
+<h2>EMPLOYEES</h2>
+<input class="get-button" [(ngModel)]="buscarId" placeholder="Buscar por el id">
+<button class="post-button" (click)="agregarEmpleado()">Agregar empleado</button>
 
 @if (loading) {
     <div>Cargando...</div>
@@ -21,6 +21,9 @@
             <li>Department: <strong>{{ employee.department }}</strong></li>
             <li>Salary: <strong>{{ employee.salary }}</strong></li>
             <li>Created At: <strong>{{ employee.createdAt }}</strong></li>
+
+            <button class="delete-button" (click)="eliminarEmpleado(employee.id)">Eliminar</button>
+            <button class="put-button" (click)="editarEmpleado(employee.id)">Editar</button>
         }
     }
     </ul>

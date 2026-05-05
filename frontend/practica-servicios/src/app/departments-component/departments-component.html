@@ -1,6 +1,6 @@
-<h2>Departments</h2>
-<h3>Buscar por el id: </h3>
-<input [(ngModel)]="buscarId">
+<h2>DEPARTMENTS</h2>
+<input class="get-button" [(ngModel)]="buscarId" placeholder="Buscar por el id">
+<button class="post-button" (click)="agregarDepartamento()">Agregar departamento</button>
 
 @if (loading) {
     <div>Cargando...</div>
@@ -19,6 +19,9 @@
             <li>Description: <strong>{{ department.description }}</strong></li>
             <li>Manager Name: <strong>{{ department.managerName }}</strong></li>
             <li>Created At: <strong>{{ department.createdAt }}</strong></li>
+
+            <button class="delete-button" (click)="eliminarDepartamento(department.id)">Eliminar</button>
+            <button class="put-button" (click)="editarDepartamento(department.id)">Editar</button>
         }
     }
     </ul>
