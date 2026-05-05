@@ -1,7 +1,10 @@
-<h2>DEPARTMENTS</h2>
-<input class="get-button" [(ngModel)]="buscarId" placeholder="Buscar por el id">
-<button class="post-button" (click)="agregarDepartamento()">Agregar departamento</button>
+<div class="header">
+    <h2>DEPARTMENTS</h2>
+    <input class="get-button" [(ngModel)]="buscarId" placeholder="Buscar por el id">
+    <button class="post-button" (click)="agregarDepartamento()">Agregar departamento</button>
+</div>
 
+<div class="contenedor">
 @if (loading) {
     <div>Cargando...</div>
 }
@@ -12,8 +15,10 @@
 
 @if (!loading && !error) {
     <ul>
+    <div class="contenedor-departments">
     @for (department of departments; track department.id) {
         @if(!buscarId || department.id === buscarId){
+        <div class="contenedor-individual">
             <h3>Id: <strong>{{ department.id }}</strong></h3>
             <li>Name: <strong>{{ department.name }}</strong></li>
             <li>Description: <strong>{{ department.description }}</strong></li>
@@ -22,7 +27,10 @@
 
             <button class="delete-button" (click)="eliminarDepartamento(department.id)">Eliminar</button>
             <button class="put-button" (click)="editarDepartamento(department.id)">Editar</button>
+        </div>
         }
     }
+    </div>
     </ul>
 }
+</div>

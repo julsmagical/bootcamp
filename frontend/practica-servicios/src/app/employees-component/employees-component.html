@@ -1,20 +1,29 @@
-<h2>EMPLOYEES</h2>
-<input class="get-button" [(ngModel)]="buscarId" placeholder="Buscar por el id">
-<button class="post-button" (click)="agregarEmpleado()">Agregar empleado</button>
+<div class="header">
+    <h2>EMPLOYEES</h2>
+    <input class="get-button" [(ngModel)]="buscarId" placeholder="Buscar por el id">
+    <button class="post-button" (click)="agregarEmpleado()">Agregar empleado</button>
+</div>
 
+<div class="contenedor">
 @if (loading) {
     <div>Cargando...</div>
 }
+
 @if (error) {
     <div>{{ error }}</div>
 }
+
 @if (!loading && !error) {
     <ul>
+    <div class="contenedor-employees">
     @for (employee of employees; track employee.id) {
         @if(!buscarId || employee.id === buscarId){
-            <h3>Id: <strong>{{ employee.id }}</strong></h3>
+        <div class="contenedor-individual">
+            <div class="contenedor-cabeza">
+                <h3>Id: <strong>{{ employee.id }}</strong></h3>
+                <li><img [src]="employee.avatar" width="80"></li>
+            </div>
             <li>Name: <strong>{{ employee.name }}</strong></li>
-            <li><img [src]="employee.avatar" width="60"></li>
             <li>Email: <strong>{{ employee.email }}</strong></li>
             <li>Phone: <strong>{{ employee.phone }}</strong></li>
             <li>Position: <strong>{{ employee.position }}</strong></li>
@@ -24,7 +33,10 @@
 
             <button class="delete-button" (click)="eliminarEmpleado(employee.id)">Eliminar</button>
             <button class="put-button" (click)="editarEmpleado(employee.id)">Editar</button>
+        </div>
         }
     }
+    </div>
     </ul>
 }
+</div>
