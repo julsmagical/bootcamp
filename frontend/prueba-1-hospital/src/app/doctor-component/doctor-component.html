@@ -1,0 +1,37 @@
+<div class="header">
+    <h2>DOCTORES</h2>
+    <button class="post-button" (click)="agregarDoctor()">Agregar doctor</button>
+</div>
+
+<div class="body">
+    @if (loading) {
+        <div>Cargando...</div>
+    }
+
+    @if (error) {
+        <div>{{ error }}</div>
+    }
+
+    @if (!loading && !error) {
+        <ul>
+            <div class="contenedor-doctores">
+                @for (doctor of doctors; track doctor.id) {
+                @if(!buscarId || doctor.id === buscarId){
+                <div class="contenedor-individual">
+                    <div class="contenedor-header">
+                        <h3><strong>Id: </strong> {{ doctor.id }} </h3>
+                    </div>
+                    <li><strong>Name: </strong>{{ doctor.name }}</li>
+                    <li><strong>Last Name: </strong>{{ doctor.lastName }}</li>
+                    <li><strong>Gender: </strong>{{ doctor.gender }}</li>
+                    <li><strong>Adress: </strong>{{ doctor.address }}</li>
+                    <li><strong>Created At: </strong>{{ doctor.createdAt }}</li>
+                    <button class="delete-button" (click)="eliminarDoctor(doctor.id)">Eliminar</button>
+                    <button class="put-button" (click)="editarDoctor(doctor.id)">Editar</button>
+                </div>
+                }
+            }
+            </div>
+        </ul>
+    }
+</div>

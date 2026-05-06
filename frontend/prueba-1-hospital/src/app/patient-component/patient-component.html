@@ -1,0 +1,37 @@
+<div class="header">
+    <h2>PACIENTES</h2>
+    <button class="post-button" (click)="agregarPaciente()">Agregar paciente</button>
+</div>
+
+<div class="body">
+    @if (loading) {
+        <div>Cargando...</div>
+    }
+
+    @if (error) {
+        <div>{{ error }}</div>
+    }
+
+    @if (!loading && !error) {
+        <ul>
+            <div class="contenedor-pacientes">
+                @for (patient of patients; track patient.id) {
+                @if(!buscarId || patient.id === buscarId){
+                <div class="contenedor-individual">
+                    <div class="contenedor-header">
+                        <h3><strong>Id: </strong> {{ patient.id }} </h3>
+                        <li><img [src]="patient.avatar" width="80"></li>
+                    </div>
+                    <li><strong>Name: </strong> {{ patient.name }} </li>
+                    <li><strong>Age: </strong> {{ patient.age }} </li>
+                    <li><strong>Phone: </strong> {{ patient.phone }} </li>
+                    <li><strong>Created At: </strong> {{ patient.createdAt }} </li>
+                    <button class="delete-button" (click)="eliminarPaciente(patient.id)">Eliminar</button>
+                    <button class="put-button" (click)="editarPaciente(patient.id)">Editar</button>
+                </div>
+                }
+            }
+            </div>
+        </ul>
+    }
+</div>
