@@ -1,0 +1,15 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/components/header-component/header-component';
+import { FooterComponent } from './shared/components/footer-component/footer-component';
+import { NavbarComponent } from "./shared/components/navbar-component/navbar-component";
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, NavbarComponent],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
+})
+export class App {
+  protected readonly title = signal('practica-angular-material');
+}

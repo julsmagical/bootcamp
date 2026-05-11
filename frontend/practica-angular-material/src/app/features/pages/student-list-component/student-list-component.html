@@ -1,0 +1,41 @@
+<div class="header">
+    <h2>STUDENTS</h2>
+</div>
+
+<div class="body">
+    @if (loading) {
+        <div>Cargando... <mat-spinner></mat-spinner></div>
+    }
+
+    @if (error) {
+        <div>{{ error }}</div>
+    }
+
+    @if (!loading && !error) {
+        <ul>
+            <div class="contenedor-estudiantes">
+                @for (student of students; track student.id) {
+                @if(!buscarId || student.id === buscarId){
+                <div class="contenedor-individual">
+                    <mat-card class="example-card" appearance="outlined">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title><strong> {{ student.name }} </strong></mat-card-title>
+                            <mat-card-subtitle><strong> {{student.id}} </strong></mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                        <mat-card-content class="lista">
+                            <mat-list-item><strong>Name: </strong> {{ student.name }} </mat-list-item>
+                            <mat-list-item><strong>Email: </strong> {{ student.email }} </mat-list-item>
+                        </mat-card-content>
+                        <mat-card-actions class="button-detalle">
+                            <button matButton>DETALLE</button>
+                        </mat-card-actions>
+                        </mat-card>
+                </div>
+                }
+            }
+            </div>
+        </ul>
+    }
+</div>
