@@ -1,20 +1,21 @@
 <div class="header">
     <h2>ESTUDIANTES</h2>
+    <button matButton (click)="abrirFormulario()" class="button-crear">CREAR</button>
 </div>
 
 <div class="body">
-    @if (loading) {
+    @if (loading()) {
         <div>Cargando... <mat-spinner diameter="38" style="margin: 0 16px" /></div>
     }
 
-    @if (error) {
-        <div>{{ error }}</div>
+    @if (error()) {
+        <div>{{ error() }}</div>
     }
 
-    @if (!loading && !error) {
+    @if (!loading() && !error()) {
         <ul>
             <div class="contenedor-estudiantes">
-                @for (student of students; track student.id) {
+                @for (student of students(); track student.id) {
                 @if(!buscarId || student.id === buscarId){
                 <div class="contenedor-individual">
                     <mat-card class="example-card" appearance="outlined">
@@ -30,6 +31,7 @@
                         </mat-card-content>
                         <mat-card-actions class="button-detalle">
                             <button matButton (click)="verDetalle(student.id)">DETALLE</button>
+                            <button matButton (click)="abrirFormulario(student)">EDITAR</button>
                         </mat-card-actions>
                         </mat-card>
                 </div>

@@ -21,8 +21,7 @@ export class ServiceStudentComponent {
     return this._http.get<IStudent>(`${this.apiUrl}/students/${id}`);
   }
 
-  //RESTO DEL CRUD (no implementado)
-  /*
+  //CRUD
   createStudent(student: Partial<IStudent>): Observable<IStudent>{
     return this._http.post<IStudent>(`${this.apiUrl}/students`, student);
   }
@@ -33,5 +32,5 @@ export class ServiceStudentComponent {
 
   deleteStudent(id: string): Observable<void>{
     return this._http.delete<void>(`${this.apiUrl}/students/${id}`);
-  }*/
+  }
 }

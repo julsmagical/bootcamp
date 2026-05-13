@@ -1,0 +1,31 @@
+<h2 mat-dialog-title="">{{ isEdit() ? 'Editar estudiante' : 'Nuevo estudiante'}}</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="guardar()">
+        <mat-form-field appearance="outline" style="width: 100%; margin-top: 6px;">
+            <input matInput formControlName="name" placeholder="Nombre">
+            @if (form.get('name')?.hasError('required') && form.get('name')?.touched){
+                <mat-error>El nombre es obligatorio</mat-error>
+            }
+            @if (form.get('name')?.hasError('minlength') && form.get('name')?.touched){
+                <mat-error>El nombre debe tener minimo 3 caracteres</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width: 100%; margin-top: 6px;">
+            <input matInput formControlName="email" placeholder="Email">
+            @if (form.get('email')?.hasError('required') && form.get('email')?.touched){
+                <mat-error>El email es obligatorio</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width: 100%; margin-top: 6px;">
+            <input matInput formControlName="courseId" placeholder="ID del curso">
+            @if (form.get('courseId')?.hasError('required') && form.get('courseId')?.touched){
+                <mat-error>El curso es obligatorio</mat-error>
+            }
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">
+            {{isEdit() ? 'Actualizar' : 'Crear'}}
+        </button>
+    </form>
+</mat-dialog-content>
