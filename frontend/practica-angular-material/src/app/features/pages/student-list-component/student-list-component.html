@@ -1,10 +1,10 @@
 <div class="header">
-    <h2>STUDENTS</h2>
+    <h2>ESTUDIANTES</h2>
 </div>
 
 <div class="body">
     @if (loading) {
-        <div>Cargando... <mat-spinner></mat-spinner></div>
+        <div>Cargando... <mat-spinner diameter="38" style="margin: 0 16px" /></div>
     }
 
     @if (error) {
@@ -25,11 +25,11 @@
                         </mat-card-header>
                         <img mat-card-image src="https://material.angular.dev/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
                         <mat-card-content class="lista">
-                            <mat-list-item><strong>Name: </strong> {{ student.name }} </mat-list-item>
+                            <mat-list-item><strong>Nombre: </strong> {{ student.name }} </mat-list-item>
                             <mat-list-item><strong>Email: </strong> {{ student.email }} </mat-list-item>
                         </mat-card-content>
                         <mat-card-actions class="button-detalle">
-                            <button matButton>DETALLE</button>
+                            <button matButton (click)="verDetalle(student.id)">DETALLE</button>
                         </mat-card-actions>
                         </mat-card>
                 </div>

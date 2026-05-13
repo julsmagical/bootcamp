@@ -7,6 +7,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; //n
 //interface y services
 import { ServiceStudentComponent } from '../../services/service-student-component';
 import { IStudent } from '../../interfaces/students';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-student-list-component',
@@ -22,6 +23,8 @@ export class StudentListComponent {
   loading = false; 
   error = '';
   
+  constructor(private router: Router){}
+
   ngOnInit(){
     this.cargarEstudiantes();
   }
@@ -40,5 +43,9 @@ export class StudentListComponent {
         this.loading = false;
       }
     });
+  }
+
+  verDetalle(id: string){
+    this.router.navigate(['students/', id]);
   }
 }

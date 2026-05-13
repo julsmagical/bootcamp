@@ -1,1 +1,40 @@
-<p>course-list-component works!</p>
+<div class="header">
+    <h2>CURSOS</h2>
+</div>
+
+<div class="body">
+    @if (loading) {
+        <div>Cargando... <mat-spinner diameter="38" style="margin: 0 16px" /></div>
+    }
+
+    @if (error) {
+        <div>{{ error }}</div>
+    }
+
+    @if (!loading && !error) {
+        <ul>
+            <div class="contenedor-cursos">
+                @for (course of courses; track course.id) {
+                @if(!buscarId || course.id === buscarId){
+                <div class="contenedor-individual">
+                    <mat-card class="example-card" appearance="outlined">
+                        <mat-card-header>
+                            <mat-card-title><strong> {{ course.name }} </strong></mat-card-title>
+                            <mat-card-subtitle><strong> {{course.id}} </strong></mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content class="lista">
+                            <mat-list-item><strong>Nombre: </strong> {{ course.name }} </mat-list-item>
+                            <mat-list-item><strong>Descripción: </strong> {{ course.description }} </mat-list-item>
+                        </mat-card-content>
+                        <mat-card-actions class="button-detalle">
+                            <button matButton (click)="verDetalle(course.id)" >DETALLE</button>
+                        </mat-card-actions>
+                        </mat-card>
+                </div>
+                }
+            }
+            </div>
+        </ul>
+    }
+</div>
+

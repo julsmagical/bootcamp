@@ -1,0 +1,77 @@
+*{
+  list-style: none;
+}
+
+.header{
+  padding: 10px;
+  background-color: rgb(18, 18, 53);
+  margin: 20px 0px;
+  margin-bottom: 0px;
+}
+
+.body{
+  display: flex;
+  gap: 10px;
+  margin-top: 0px;
+}
+
+.contenedor-cursos{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid rgb(95, 92, 121);;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.contenedor-individual{
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid rgb(18, 18, 53);
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+//err
+.contenedor-header{
+  display: flex;
+}
+
+ul {
+  background: rgb(255, 255, 255);
+  padding: 0px 20px;
+}
+
+ul li {
+  color: rgb(5, 0, 51);
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.lista{
+  color: rgb(5, 0, 51);
+  padding: 10px;
+  margin-left: 20px;
+}
+
+h2{
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.button-detalle{
+    margin-left: 10px;
+}
