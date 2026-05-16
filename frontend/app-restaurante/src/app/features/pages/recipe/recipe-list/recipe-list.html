@@ -1,0 +1,70 @@
+<section class="recipes-page">
+  <div class="page-header">
+    <div>
+      <span class="section-subtitle"> Catálogo gastronómico</span>
+      <h1>Recetas</h1>
+    </div>
+
+    <button mat-flat-button class="create-button" (click)="abrirFormulario()">
+      Nueva receta
+    </button>
+  </div>
+
+  @if (loading()) {
+    <div class="loading-container">
+      <mat-spinner diameter="42"></mat-spinner>
+      <span>Cargando recetas...</span>
+    </div>
+  }
+
+  @if (error()) {
+    <div class="error-message"> {{ error() }} </div>
+  }
+
+  @if (!loading() && !error()) {
+    <div class="recipes-grid">
+      @for (recipe of recipes(); track recipe.id) {
+        <mat-card class="recipe-card">
+          <mat-card-content>
+            <span class="recipe-country">
+              {{ recipe.country }}
+            </span>
+            <h2>
+              {{ recipe.name }}
+            </h2>
+            <p>
+              {{ recipe.description }}
+            </p>
+          </mat-card-content>
+
+          <!--Detalle-->
+          <mat-card-actions class="card-actions">
+            <button mat-icon-button
+              class="action-btn detail"
+              (click)="verDetalle(recipe.id)"
+            >
+              <i class="fa-solid fa-eye"></i>
+            </button>
+
+            <!--Editar-->
+            <button mat-icon-button
+              class="action-btn edit"
+              (click)="abrirFormulario(recipe)"
+            >
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+
+            <!--Eliminar-->
+            <button mat-icon-button
+              class="action-btn delete"
+              (click)="abrirDialog(recipe)"
+            >
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          
+          </mat-card-actions>
+        </mat-card>
+      }
+      </div>
+  }
+</section>

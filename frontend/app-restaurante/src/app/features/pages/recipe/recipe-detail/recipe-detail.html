@@ -1,0 +1,20 @@
+<section class="detail-page">
+  @if (error()) {
+    <div class="error"> {{ error() }} </div>
+  }
+
+  @if (recipeSelected()) {
+    <div class="detail-card">
+      <h1 class="title">{{ recipeSelected()?.name }}</h1>
+
+      <div class="info-grid">
+        <p><strong>ID:</strong> {{ recipeSelected()?.id }}</p>
+        <p><strong>Created at:</strong> {{ recipeSelected()?.createdAt }}</p>
+        <p><strong>Country:</strong> {{ recipeSelected()?.country }}</p>
+        <p class="description">
+          <strong>Description:</strong> {{ recipeSelected()?.description }}
+        </p>
+      </div>
+    </div>
+  }
+</section>

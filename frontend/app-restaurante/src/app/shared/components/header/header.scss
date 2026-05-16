@@ -1,0 +1,55 @@
+.header {
+  height: 88px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b1e0f;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background-color: #6b341f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-name {
+  color: #fff7f0;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-links a {
+  color: #f6d2b8;
+  font-size:x-large;
+}
+
+.social-links a:hover {
+  color: #ffbe88;
+  transform: translateY(-4px); //para que los iconos suban tantito
+}

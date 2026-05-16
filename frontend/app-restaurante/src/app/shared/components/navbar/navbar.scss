@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  padding: 0 32px;
+  gap: 12px;
+  background: #f4ebe4;
+}
+
+.custom-navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 12px;
+  color: #6a4a3c;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.custom-navbar a:hover {
+  background: rgba(111, 78, 55, 0.06);
+}
+
+//transiciones para estado activo
+.custom-navbar .mdc-tab--active {
+  background: #e7d7cb;
+  color: #4b2e22;
+}

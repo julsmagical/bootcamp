@@ -1,0 +1,48 @@
+.dialog {
+  min-width: 320px;
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 16px;
+  color: #3d2a22;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.message {
+  margin-bottom: 8px;
+  color: #6e5a50;
+  font-size: 15px;
+}
+
+.recipe-name {
+  margin-bottom: 16px;
+  color: #3d2a22;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.warning {
+  margin-bottom: 24px;
+  color: #9b6b4d;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.delete-btn {
+  padding: 0 20px;
+  border-radius: 10px;
+  background: #b84f4f;
+  color: #fffaf6;
+}
+
+.delete-btn:hover {
+  background: #a54545;
+}

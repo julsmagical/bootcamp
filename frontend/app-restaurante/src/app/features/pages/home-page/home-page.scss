@@ -1,0 +1,98 @@
+.home-container {
+  min-height: 100%;
+  background-color: #faf6f2;
+  padding: 64px 80px;
+}
+
+.hero-section {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.subtitle {
+  color: #9b6b4d;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase; 
+}
+
+.hero-section h1 {
+  margin-top: 16px;
+  color: #3d2a22;
+  font-size: 54px;
+  line-height: 1.1;
+}
+
+.hero-section p {
+  margin-top: 20px;
+  color: #6e5a50;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.section-header {
+  margin-bottom: 32px;
+}
+
+.section-header h2 {
+  color: #3d2a22;
+  font-size: 32px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); //3 cartas: 1fr 1fr 1fr
+  gap: 32px;
+}
+
+.food-card {
+  background-color: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.image-container {
+  width: 100%;
+  height: 240px;
+  background-color: #e7ddd5;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.stars {
+  margin-bottom: 16px;
+  color: #d89b45;
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.card-content h3 {
+  color: #3d2a22;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  color: #6e5a50;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.origin {
+  color: #9b6b4d;
+  font-size: 14px;
+  font-weight: 600;
+}

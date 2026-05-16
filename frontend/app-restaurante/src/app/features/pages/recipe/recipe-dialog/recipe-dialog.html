@@ -1,0 +1,18 @@
+<div class="dialog">
+  <h2 class="title">Eliminar receta</h2>
+
+  <p class="message">¿Estás seguro de que quieres eliminar la receta: </p>
+  <p class="recipe-name"> "{{ recipe?.name }}" </p>
+
+  <p class="warning"> Esta acción no se puede deshacer.</p>
+
+  <div class="actions">
+    <button mat-button (click)="cancelar()" [disabled]="loading()">
+      Cancelar
+    </button>
+
+    <button mat-flat-button class="delete-btn" (click)="eliminar()" [disabled]="loading()">
+      Eliminar
+    </button>
+  </div>
+</div>
