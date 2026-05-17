@@ -1,0 +1,20 @@
+<h2 mat-dialog-title class="dialog-title">{{ data.title }}</h2>
+
+<mat-dialog-content class="dialog-content">
+  @if (data.message) {
+    <p class="dialog-message">{{ data.message }}</p>
+  }
+  @if (data.subMessage) {
+    <p class="dialog-submessage">{{ data.subMessage }}</p>
+  }
+  @if (data.component) {
+    <ng-container *ngComponentOutlet="data.component"></ng-container>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-flat-button [color]="data.btnColor || 'primary'" (click)="onSaveClick()">
+    {{ data.btnText || 'Guardar' }}
+  </button>
+</mat-dialog-actions>

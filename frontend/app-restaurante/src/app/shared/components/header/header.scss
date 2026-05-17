@@ -49,6 +49,12 @@
   font-size:x-large;
 }
 
+.social-links a img {
+  height: 48px;
+  display: block;
+  object-fit: contain;
+}
+
 .social-links a:hover {
   color: #ffbe88;
   transform: translateY(-4px); //para que los iconos suban tantito

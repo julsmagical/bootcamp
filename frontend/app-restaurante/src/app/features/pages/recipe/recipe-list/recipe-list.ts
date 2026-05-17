@@ -3,11 +3,13 @@ import { IRecipe } from '../../../interfaces/recipes';
 import { RecipeService } from '../../../services/recipe-service';
 import { Router } from '@angular/router';
 
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { RecipeForm } from '../recipe-form/recipe-form';
 import { RecipeDialog } from '../recipe-dialog/recipe-dialog';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { Subject } from 'rxjs';
+import { GenericDialog } from '../../../../shared/components/generic-dialog/generic-dialog';
 
 @Component({
   selector: 'app-recipe-list',
@@ -49,19 +51,39 @@ export class RecipeList {
     this.router.navigate(['/recipes', id]);
   }
 
-  abrirFormulario(recipe: IRecipe | null = null){
+  abrirFormulario(recipe: IRecipe | null = null) {
     const dialogRef = this.dialog.open(RecipeForm, {
       width: '480px',
-      data: recipe
-    })
-  }
-
-  abrirDialog(recipe: IRecipe) {
-    const dialogRef = this.dialog.open(RecipeDialog, {
       data: recipe
     });
 
     dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.cargarRecetas();
+      }
+    });
+  }
+
+  abrirDialog(recipe: IRecipe) {
+    const saveSubject = new Subject<void>();
+
+    const dialogRef = this.dialog.open(GenericDialog, {
+      width: '420px',
+      data: {
+        title: 'Eliminar receta',
+        message: `¿Estás seguro de que deseas eliminar la receta "${recipe.name}"?`,
+        subMessage: 'Esta acción no se puede deshacer.',
+        btnText: 'Eliminar',
+        btnColor: 'warn',
+        component: RecipeDialog,
+        recipe: recipe,
+        onSave: saveSubject,
+        action: 'delete',
+      }
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      saveSubject.complete();
       if (result) {
         this.cargarRecetas();
       }

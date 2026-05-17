@@ -10,6 +10,13 @@
   justify-content: space-between;
   margin-bottom: 18px;
   line-height: normal;
+
+  h1 {
+    margin-top: 8px;
+    color: #3d2a22;
+    font-size: 44px;
+    font-weight: 700;
+  }
 }
 
 .section-subtitle {
@@ -17,13 +24,6 @@
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.page-header h1 {
-  margin-top: 8px;
-  color: #3d2a22;
-  font-size: 44px;
-  font-weight: 700;
 }
 
 .create-button {
@@ -56,13 +56,26 @@
 
 .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
 
 .recipe-card {
   border-radius: 22px;
   background: #fff;
+
+  h2 {
+    margin-bottom: 16px;
+    color: #3d2a22;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  p {
+    color: #6e5a50;
+    font-size: 15px;
+    line-height: 1.7;
+  }
 }
 
 mat-card-content {
@@ -75,19 +88,6 @@ mat-card-content {
   color: #9b6b4d;
   font-size: 13px;
   font-weight: 600;
-}
-
-.recipe-card h2 {
-  margin-bottom: 16px;
-  color: #3d2a22;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.recipe-card p {
-  color: #6e5a50;
-  font-size: 15px;
-  line-height: 1.7;
 }
 
 .card-actions {
@@ -104,20 +104,20 @@ mat-card-content {
   height: 38px;
   background: transparent;
   border: none;
-}
 
-.action-btn i {
-  font-size: 16px;
-}
+  i {
+    font-size: 16px;
+  }
 
-.action-btn.detail i {
-  color: #5a2413;
-}
+  &.detail i {
+    color: #5a2413;
+  }
 
-.action-btn.edit i {
-  color: #8b6a55;
-}
+  &.edit i {
+    color: #8b6a55;
+  }
 
-.action-btn.delete i {
-  color: #b84f4f;
+  &.delete i {
+    color: #b84f4f;
+  }
 }

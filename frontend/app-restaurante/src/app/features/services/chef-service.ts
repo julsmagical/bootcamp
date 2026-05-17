@@ -8,7 +8,6 @@ import { IChef } from '../interfaces/chefs';
   providedIn: 'root',
 })
 export class ChefService {
-  // URL base de la API
   private apiUrl = environment.apiUrl;
   private _http = inject(HttpClient);
 

@@ -14,14 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-recipe-form',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDialogContent,
-    MatDialogActions
-],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatDialogContent, MatDialogActions],
   templateUrl: './recipe-form.html',
   styleUrl: './recipe-form.scss',
 })

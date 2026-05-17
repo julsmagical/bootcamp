@@ -37,7 +37,6 @@
             </p>
           </mat-card-content>
 
-          <!--Detalle-->
           <mat-card-actions class="card-actions">
             <button mat-icon-button
               class="action-btn detail"
@@ -46,7 +45,6 @@
               <i class="fa-solid fa-eye"></i>
             </button>
 
-            <!--Editar-->
             <button mat-icon-button
               class="action-btn edit"
               (click)="abrirFormulario(recipe)"
@@ -54,17 +52,15 @@
               <i class="fa-solid fa-pen-to-square"></i>
             </button>
 
-            <!--Eliminar-->
             <button mat-icon-button
               class="action-btn delete"
               (click)="abrirDialog(recipe)"
             >
               <i class="fa-solid fa-trash"></i>
             </button>
-          
           </mat-card-actions>
         </mat-card>
       }
-      </div>
+    </div>
   }
 </section>
