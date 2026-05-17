@@ -1,1 +1,71 @@
-<p>chef-detail works!</p>
+<section class="chef-detail-page">
+  <div class="page-container">
+    <button mat-stroked-button class="back-button" (click)="volverALista()">Volver</button>
+
+    @if (loading()) {
+      <div class="loading-container">
+        <mat-spinner diameter="42"></mat-spinner>
+        <span>Cargando detalle del chef...</span>
+      </div>
+    }
+
+    @if (error()) {
+      <div class="error-message">{{ error() }}</div>
+    }
+
+    @if (!loading() && !error() && chef(); as chefData) {
+      <mat-card class="detail-card">
+        <div class="card-header">
+          <div class="header-content">
+            <div>
+              <span class="section-subtitle">Chef Profesional</span>
+              <h1>{{ chefData.name }}</h1>
+              <p class="chef-id">ID: {{ chefData.id }}</p>
+            </div>
+
+            <div class="action-icons">
+              <button mat-icon-button (click)="editarChef(chefData)">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button mat-icon-button (click)="eliminarChef(chefData)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="info-sep">
+            <div class="info-group">
+              <span class="info-label">Género</span>
+              <p class="info-value">{{ chefData.gender }}</p>
+            </div>
+
+            <div class="info-group">
+              <span class="info-label">Creación</span>
+              <p class="info-value">{{ formatCreatedAt(chefData.createdAt) }}</p>
+            </div>
+          </div>
+
+          <div class="info-sep">
+            <div class="info-group">
+              <span class="info-label">País</span>
+              <p class="info-value">{{ chefData.country }}</p>
+            </div>
+
+            <div class="info-group">
+              <span class="info-label">Ciudad</span>
+              <p class="info-value">{{ chefData.city }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button mat-flat-button class="edit-button" (click)="editarChef(chefData)">Editar chef</button>
+          <button mat-stroked-button color="warn" class="delete-button" (click)="eliminarChef(chefData)">Eliminar chef</button>
+        </div>
+        
+      </mat-card>
+    }
+  </div>
+</section>
