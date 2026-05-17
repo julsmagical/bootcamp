@@ -1,0 +1,52 @@
+<section class="chefs-page">
+  <div class="page-header">
+    <div>
+      <span class="section-subtitle">Catálogo gastronómico</span>
+      <h1>Cocineros</h1>
+    </div>
+
+    <button mat-flat-button class="create-button" (click)="abrirFormulario()">Nuevo cocinero</button>
+  </div>
+
+  @if (loading()) {
+    <div class="loading-container">
+      <mat-spinner diameter="42"></mat-spinner>
+      <span>Cargando cocineros...</span>
+    </div>
+  }
+
+  @if (error()) {
+    <div class="error-message">{{ error() }}</div>
+  }
+
+  @if (!loading() && !error()) {
+    <div class="chef-grid">
+      @for (chef of chefs(); track chef.id) {
+        <mat-card class="chef-card">
+          <mat-card-content>
+            <div class="chef-location">
+              <p><span class="chef-label">{{ chef.country }}</span></p>
+              <p><span class="chef-label">{{ chef.city }}</span></p>
+            </div>
+            <h2>{{ chef.name }}</h2>
+            <p class="chef-gender">{{ chef.gender }}</p>
+          </mat-card-content>
+
+          <mat-card-actions class="card-actions">
+            <button mat-icon-button class="action-btn detail" (click)="verDetalle(chef.id)">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+
+            <button mat-icon-button class="action-btn edit" (click)="abrirFormulario(chef)">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+
+            <button mat-icon-button class="action-btn delete" (click)="abrirDialog(chef)">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  }
+</section>
