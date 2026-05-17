@@ -17,6 +17,5 @@ export class GenericDialog {
 
   onSaveClick() {
     this.data.onSave?.next(); //para enviar al componente padre
-    this.dialogRef.close(true);
   }
 }

@@ -15,7 +15,7 @@ import { GenericDialog } from '../../../../shared/components/generic-dialog/gene
 export class RecipeDialog {
   private _recipeService = inject(RecipeService);
   private snackBar = inject(MatSnackBar);
-  private dialogRef = inject(MatDialogRef<GenericDialog>);
+  //private dialogRef = inject(MatDialogRef<RecipeDialog>);
   private dialogData = inject(MAT_DIALOG_DATA);
 
   recipe: IRecipe | null = null;
@@ -41,7 +41,7 @@ export class RecipeDialog {
           { duration: 2000 }
         );
 
-        this.dialogRef.close(true); //con el generic dialog para recargar
+        this.dialogData.dialogRef?.close(true); //cerrar el dialog y actualizar 
       },
 
       error: () => {
@@ -56,6 +56,6 @@ export class RecipeDialog {
   }
 
   cancelar() {
-    this.dialogRef.close(false);
+    this.dialogData.dialogRef.close(false);
   }
 }

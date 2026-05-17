@@ -81,11 +81,13 @@ export class RecipeList {
       }
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      saveSubject.complete();
-      if (result==true) { //para la recarga
-        this.cargarRecetas();
-      }
-    });
+  dialogRef.componentInstance.data.dialogRef = dialogRef;
+
+  dialogRef.afterClosed().subscribe((result) => {
+    //saveSubject.complete();
+    if (result === true) {
+      this.cargarRecetas();
+    }
+  });
   }
 }

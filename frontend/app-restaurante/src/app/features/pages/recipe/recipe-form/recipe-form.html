@@ -8,16 +8,28 @@
     <mat-form-field appearance="outline" class="field">
       <mat-label>Nombre</mat-label>
       <input matInput formControlName="name">
+
+      <mat-error>
+        {{ errorMessage('name') }}
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="field">
       <mat-label>Descripción</mat-label>
       <textarea matInput formControlName="description" rows="4"></textarea>
+    
+      <mat-error>
+        {{ errorMessage('description') }}
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="field">
       <mat-label>País</mat-label>
       <input matInput formControlName="country">
+
+      <mat-error>
+        {{ errorMessage('country') }}
+      </mat-error>
     </mat-form-field>
 
   </mat-dialog-content>

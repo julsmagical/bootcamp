@@ -44,7 +44,12 @@ export class RecipeForm {
 
     country: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.required, Validators.minLength(3)]
+      validators: [
+        Validators.required, 
+        Validators.minLength(3), 
+        Validators.maxLength(30),
+        Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/)
+      ]
     }),
   });
 
@@ -95,5 +100,27 @@ export class RecipeForm {
         );
       }
     });
+  }
+
+  //Nota: esta función la busque para no manejar todo en el html porque era mucho texto
+  errorMessage(controlMessage: string): string {
+    const control = this.form.get(controlMessage);
+
+    if (!control || !control.errors || !control.touched) {
+      return '';
+    }
+    if (control.hasError('required')) {
+      return 'Este campo es obligatorio';
+    }
+    if (control.hasError('minlength')) {
+      return `El mínimo es de ${control.errors['minlength'].requiredLength} caracteres`;
+    }
+    if (control.hasError('maxlength')) {
+      return `El máximo es de ${control.errors['maxlength'].requiredLength} caracteres`;
+    }
+    if (control.hasError('pattern')) {
+      return 'Solo se permiten letras y espacios';
+    }
+    return '';
   }
 }

@@ -1,5 +1,7 @@
 import { Type } from '@angular/core';
 import { Subject } from 'rxjs';
+import { MatDialogRef } from '@angular/material/dialog';
+import { GenericDialog } from '../../shared/components/generic-dialog/generic-dialog';
 
 // nota: se creo esta interface para tenerlo separado del .ts
 export interface IGenericDialog {
@@ -14,4 +16,5 @@ export interface IGenericDialog {
   action?: 'save' | 'delete' | 'edit';
   id?: string | null;
   onSave?: Subject<void>;
+  dialogRef?: MatDialogRef<GenericDialog>;
 }
