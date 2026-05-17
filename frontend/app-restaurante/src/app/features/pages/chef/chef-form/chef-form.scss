@@ -1,0 +1,40 @@
+.title {
+  padding: 24px 24px 0;
+  margin: 0;
+  color: #3d2a22;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    max-height: 65vh;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 24px 24px;
+  margin: 0;
+}
+
+.save-btn {
+  padding: 0 22px;
+  border-radius: 10px;
+  background: #5a2413;
+  color: #fffaf6;
+}
