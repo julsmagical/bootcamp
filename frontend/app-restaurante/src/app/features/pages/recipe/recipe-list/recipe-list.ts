@@ -71,7 +71,6 @@ export class RecipeList {
       width: '420px',
       data: {
         title: 'Eliminar receta',
-        message: `¿Estás seguro de que deseas eliminar la receta "${recipe.name}"?`,
         subMessage: 'Esta acción no se puede deshacer.',
         btnText: 'Eliminar',
         btnColor: 'warn',
@@ -84,7 +83,7 @@ export class RecipeList {
 
     dialogRef.afterClosed().subscribe((result) => {
       saveSubject.complete();
-      if (result) {
+      if (result==true) { //para la recarga
         this.cargarRecetas();
       }
     });

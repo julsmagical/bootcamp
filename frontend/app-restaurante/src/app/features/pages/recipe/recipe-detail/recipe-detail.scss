@@ -1,49 +1,145 @@
-.detail-page {
+.recipe-detail-page {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 48px;
+  padding: 48px 64px;
   background: #faf6f2;
 }
 
-.detail-card {
-  width: 100%;
-  max-width: 780px;
-  padding: 40px;
-  border-radius: 22px;
-  background: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.title {
-  margin-bottom: 28px;
-  color: #3d2a22;
-  font-size: 34px;
-  font-weight: 700;
+.back-button {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  color: #6e5a50 ;
+  border-color: #f1eae4 ;
 }
 
-.info-grid {
+.loading-container {
+  height: 320px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   color: #6e5a50;
-  font-size: 16px;
-  line-height: 1.6;
 }
 
-.info-grid p strong {
-  color: #3d2a22;
-  font-weight: 600;
-}
-
-.description {
-  margin-top: 8px;
-}
-
-.error {
+.error-message {
   padding: 16px 20px;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #f9e5e5;
   color: #8a3b3b;
+  font-weight: 500;
+}
+
+.detail-card {
+  border-radius: 22px ;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02) ;
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #3d2a22 0%, #5a2413 100%);
+  padding: 36px 40px;
+  color: #fffaf6;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h1 {
+    margin: 8px 0 4px 0;
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+.section-subtitle {
+  color: #d9c5b2;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  line-height: 4;
+}
+
+.recipe-id {
+  margin: 0;
+  font-size: 13px;
+  color: #bfa695;
+  line-height: 4;
+}
+
+.action-icons {
+  display: flex;
+  gap: 8px;
+
+  button {
+    background: rgb(36, 5, 5);
+    color: #fffaf6;
+    font-size: 16px;
+  }
+}
+
+.card-body {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing:0em;
+  color: #9b6b4d;
+}
+
+.info-value {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3d2a22;
+
+  &.description {
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #6e5a50;
+  }
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  padding: 24px 40px;
+  border-top: 1px solid #faf6f2;
+
+  .edit-button {
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 12px;
+    background: #5a2413;
+    color: #fffaf6;
+    font-weight: 500;
+  }
+
+  .delete-button {
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
 }

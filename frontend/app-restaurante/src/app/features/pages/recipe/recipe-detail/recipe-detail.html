@@ -1,20 +1,63 @@
-<section class="detail-page">
-  @if (error()) {
-    <div class="error"> {{ error() }} </div>
-  }
+<section class="recipe-detail-page">
+  <div class="page-container">
+    <button mat-stroked-button class="back-button" (click)="volverALista()">
+      Volver
+    </button>
 
-  @if (recipeSelected()) {
-    <div class="detail-card">
-      <h1 class="title">{{ recipeSelected()?.name }}</h1>
-
-      <div class="info-grid">
-        <p><strong>ID:</strong> {{ recipeSelected()?.id }}</p>
-        <p><strong>Created at:</strong> {{ recipeSelected()?.createdAt }}</p>
-        <p><strong>Country:</strong> {{ recipeSelected()?.country }}</p>
-        <p class="description">
-          <strong>Description:</strong> {{ recipeSelected()?.description }}
-        </p>
+    @if (loading()) {
+      <div class="loading-container">
+        <mat-spinner diameter="42"></mat-spinner>
+        <span>Cargando detalle de la receta...</span>
       </div>
-    </div>
-  }
+    }
+
+    @if (error()) {
+      <div class="error-message">{{ error() }}</div>
+    }
+
+    @if (!loading() && !error() && recipe(); as recipeData) {
+      <mat-card class="detail-card">
+        <div class="card-header">
+          <div class="header-content">
+            <div>
+              <span class="section-subtitle">Receta gastronómica</span>
+              <h1>{{ recipeData.name }}</h1>
+              <p class="recipe-id">ID: {{ recipeData.id }}</p>
+            </div>
+
+            <div class="action-icons">
+              <button mat-icon-button (click)="editarReceta(recipeData)">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button mat-icon-button (click)="eliminarReceta(recipeData)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="info-group">
+            <span class="info-label">Descripción</span>
+            <p class="info-value description">{{ recipeData.description }}</p>
+          </div>
+
+          <div class="info-group">
+            <span class="info-label">País de origen</span>
+            <p class="info-value">{{ recipeData.country }}</p>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button mat-flat-button class="edit-button" (click)="editarReceta(recipeData)">
+            Editar receta
+          </button>
+          <button mat-stroked-button color="warn" class="delete-button" (click)="eliminarReceta(recipeData)">
+            Eliminar receta
+          </button>
+        </div>
+        
+      </mat-card>
+    }
+  </div>
 </section>

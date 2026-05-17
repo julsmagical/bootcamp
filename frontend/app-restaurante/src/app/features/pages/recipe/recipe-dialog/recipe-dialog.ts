@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { RecipeService } from '../../../services/recipe-service';
 import { IRecipe } from '../../../interfaces/recipes';
+import { GenericDialog } from '../../../../shared/components/generic-dialog/generic-dialog';
 
 @Component({
   selector: 'app-recipe-dialog',
@@ -14,7 +15,7 @@ import { IRecipe } from '../../../interfaces/recipes';
 export class RecipeDialog {
   private _recipeService = inject(RecipeService);
   private snackBar = inject(MatSnackBar);
-  private dialogRef = inject(MatDialogRef<RecipeDialog>);
+  private dialogRef = inject(MatDialogRef<GenericDialog>);
   private dialogData = inject(MAT_DIALOG_DATA);
 
   recipe: IRecipe | null = null;
@@ -40,7 +41,7 @@ export class RecipeDialog {
           { duration: 2000 }
         );
 
-        this.dialogRef.close(true);
+        this.dialogRef.close(true); //con el generic dialog para recargar
       },
 
       error: () => {
