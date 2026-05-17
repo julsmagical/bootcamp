@@ -19,7 +19,6 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './recipe-form.scss',
 })
 export class RecipeForm {
-
   private recipeService = inject(RecipeService);
   private snackBar = inject(MatSnackBar);
   dialogRef = inject(MatDialogRef<RecipeForm>);

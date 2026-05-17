@@ -103,22 +103,19 @@
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing:0em;
   color: #9b6b4d;
 }
 
 .info-value {
-  margin: 0;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 1.7;
   font-weight: 500;
   color: #3d2a22;
+}
 
-  &.description {
-    font-size: 15px;
-    line-height: 1.7;
-    font-weight: 400;
-    color: #6e5a50;
-  }
+.info-sep{
+  display: flex;
+  gap: 300px;
 }
 
 .card-actions {

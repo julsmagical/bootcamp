@@ -117,4 +117,12 @@ export class RecipeDetail implements OnInit {
       }
     });
   }
+
+  // Nota: Busque esta función para que al mostrar el createdAt sea más legible
+  formatCreatedAt(createdAt: IRecipe['createdAt']): string {
+    return new Intl.DateTimeFormat('es-ES', {
+      dateStyle: 'long',
+      timeStyle: 'short',
+    }).format(new Date(createdAt));
+  }
 }

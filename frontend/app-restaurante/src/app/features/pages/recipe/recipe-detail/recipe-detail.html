@@ -39,12 +39,19 @@
         <div class="card-body">
           <div class="info-group">
             <span class="info-label">Descripción</span>
-            <p class="info-value description">{{ recipeData.description }}</p>
+            <p class="info-value">{{ recipeData.description }}</p>
           </div>
 
-          <div class="info-group">
-            <span class="info-label">País de origen</span>
-            <p class="info-value">{{ recipeData.country }}</p>
+          <div class="info-sep"> <!--para separar-->
+            <div class="info-group">
+              <span class="info-label">País</span>
+              <p class="info-value">{{ recipeData.country }}</p>
+            </div>
+
+            <div class="info-group">
+              <span class="info-label">Creación</span>
+              <p class="info-value">{{ formatCreatedAt(recipeData.createdAt) }}</p>
+            </div>
           </div>
         </div>
 
