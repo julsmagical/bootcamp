@@ -8,16 +8,27 @@ import { IProduct } from '../interfaces/product';
   providedIn: 'root',
 })
 export class ProductService {
-  // URL de la API
   private readonly apiUrl = `${environment.apiUrl}/products`;
   private http = inject(HttpClient);
 
-  // Get-All
+  //CRUD
   getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(`${this.apiUrl}/products`);
+    return this.http.get<IProduct[]>(`${this.apiUrl}`);
   }
 
   getProductById(id: string): Observable<IProduct> {
-    return this.http.get<IProduct>(`${this.apiUrl}/products/${id}`);
+    return this.http.get<IProduct>(`${this.apiUrl}/${id}`);
+  }
+
+  createProduct(product: Partial<IProduct>): Observable<IProduct>{
+    return this.http.post<IProduct>(`${this.apiUrl}`, product);
+  }
+
+  updateProduct(product: Partial<IProduct>): Observable<IProduct>{
+    return this.http.put<IProduct>(`${this.apiUrl}`, product);
+  }
+
+  deleteProduct(id: string): Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
