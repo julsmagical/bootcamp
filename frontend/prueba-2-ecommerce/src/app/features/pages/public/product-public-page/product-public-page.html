@@ -1,0 +1,42 @@
+<section class="products-container">
+  <h1 class="title">Productos</h1>
+
+  @if (loading()) {
+    <div class="loading">
+      <p>Cargando productos...</p>
+    </div>
+  } @else {
+
+    <div class="products-grid">
+
+      @for (product of products(); track product.id) {
+
+        <div class="product-card">
+
+          <div class="image-container">
+            <img
+              [src]="product.thumbnail"
+              [alt]="product.title"
+            />
+          </div>
+
+          <div class="product-info">
+            <h2>{{ product.title }}</h2>
+
+            <p class="category">
+              {{ product.category }}
+            </p>
+
+            <p class="price">
+              ${{ product.price }}
+            </p>
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  }
+</section>

@@ -1,0 +1,37 @@
+<div class="products-container">
+  @for (product of products; track product.id) {
+    <div class="product-card">
+      <img
+        [src]="product.thumbnail"
+        [alt]="product.title"
+        class="product-image"
+      />
+
+      <div class="product-info">
+        <h2>{{ product.title }}</h2>
+
+        <p class="description">
+          {{ product.description }}
+        </p>
+
+        <p class="category">
+          Categoría: {{ product.category }}
+        </p>
+
+        <p class="brand">
+          Marca: {{ product.brand }}
+        </p>
+
+        <div class="product-footer">
+          <span class="price">
+            ${{ product.price }}
+          </span>
+
+          <span class="rating">
+            {{ product.rating }}
+          </span>
+        </div>
+      </div>
+    </div>
+  }
+</div>
