@@ -1,67 +1,48 @@
-<div class="login-page">
+<div class="login-wrapper">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>NovaMarket S.A.</mat-card-title>
+      <mat-card-subtitle>Ingresa tus credenciales para acceder</mat-card-subtitle>
+    </mat-card-header>
 
-    <div class="login-left">
-        <div class="brand-area">
-            <mat-icon class="brand-icon">storefront</mat-icon>
-            <h1>Nova Market</h1>
-            <p>Panel de administración. Solo personal autorizado.</p>
-        </div>
-    </div>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="ejemplo@novamarket.com">
+          <mat-icon matSuffix>email</mat-icon>
+          @if (form.get('email')?.hasError('required')) {
+            <mat-error>El correo es obligatorio</mat-error>
+          }
+          @if (form.get('email')?.hasError('email')) {
+            <mat-error>Ingresa un correo válido</mat-error>
+          }
+        </mat-form-field>
 
-    <div class="login-right">
-        <mat-card class="login-card" appearance="outlined">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [type]="showPass() ? 'text' : 'password'" formControlName="password">
+          <button mat-icon-button matSuffix type="button" (click)="showPass.set(!showPass())">
+            <mat-icon>{{ showPass() ? 'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
+          @if (form.get('password')?.hasError('required')) {
+            <mat-error>La contraseña es obligatoria</mat-error>
+          }
+          @if (form.get('password')?.hasError('minlength')) {
+            <mat-error>Debe tener al menos 6 caracteres</mat-error>
+          }
+        </mat-form-field>
 
-            <mat-card-header>
-                <mat-card-title>Iniciar sesión</mat-card-title>
-                <mat-card-subtitle>Ingresa tus credenciales para continuar</mat-card-subtitle>
-            </mat-card-header>
+        <button mat-flat-button class="submit-btn full-width" type="submit" [disabled]="loading()">
+          @if (loading()) {
+            <mat-spinner diameter="24"></mat-spinner>
+          } @else {
+            <span>Iniciar Sesión</span>
+          }
+        </button>
 
-            <mat-card-content>
-                <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
-
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Usuario</mat-label>
-                        <input matInput formControlName="username" placeholder="mor_2314" />
-                        <mat-icon matSuffix>person</mat-icon>
-                        @if (form.get('username')?.hasError('required') && form.get('username')?.touched) {
-                        <mat-error>El usuario es requerido</mat-error>
-                        }
-                    </mat-form-field>
-
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Contraseña</mat-label>
-                        <input matInput formControlName="password" [type]="showPass() ? 'text' : 'password'"
-                            placeholder="••••••••" />
-                        <button mat-icon-button matSuffix type="button" (click)="showPass.set(!showPass())">
-                            <mat-icon>{{ showPass() ? 'visibility_off' : 'visibility' }}</mat-icon>
-                        </button>
-                        @if (form.get('password')?.hasError('required') && form.get('password')?.touched) {
-                        <mat-error>La contraseña es requerida</mat-error>
-                        }
-                    </mat-form-field>
-
-                    @if (error()) {
-                    <p class="error-msg">
-                        <mat-icon>error_outline</mat-icon>
-                        {{ error() }}
-                    </p>
-                    }
-
-                    <button mat-flat-button color="primary" type="submit" class="submit-btn" [disabled]="loading()">
-                        <ng-container>
-                            @if (loading()) {
-                            <mat-spinner diameter="20" />
-                            } @else {
-                            <span class="btn-content">
-                                <mat-icon>login</mat-icon> Ingresar
-                            </span>
-                            }
-                        </ng-container>
-                    </button>
-
-                </form>
-            </mat-card-content>
-        </mat-card>
-    </div>
-
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

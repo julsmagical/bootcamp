@@ -2,7 +2,9 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/private/auth-service';
 import { Router } from '@angular/router';
-//angular material
+import { CommonModule } from '@angular/common';
+
+//angular mateiral
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -13,15 +15,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-page',
-  imports: [
-        ReactiveFormsModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatIconModule,
-        MatProgressSpinnerModule,
-        MatSnackBarModule,],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, MatSnackBarModule],
   templateUrl: './login-page.html',
   styleUrl: './login-page.scss',
 })
@@ -32,34 +27,35 @@ export class LoginPage {
   private snackBar = inject(MatSnackBar);
 
   loading = signal(false);
-  error = signal('');
   showPass = signal(false);
 
+  //validaciones básicas
   form = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
   onSubmit() {
-      if (this.form.invalid) {
-          this.form.markAllAsTouched();
-          return;
-      }
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
 
-      this.loading.set(true);
-      this.error.set('');
+    this.loading.set(true);
+    const { email, password } = this.form.value;
 
-      const { username, password } = this.form.value;
-
-      this.auth.login({ username: username!, password: password! }).subscribe({
-          next: () => {
-              this.snackBar.open('¡Bienvenido!', 'Cerrar', { duration: 3000 });
-              this.router.navigate(['/admin/dashboard']);
-          },
-          error: () => {
-              this.loading.set(false);
-              this.error.set('Usuario o contraseña incorrectos.');
-          },
-      });
+    this.auth.login({ username: email!, password: password! }).subscribe({
+      next: (response) => {
+        localStorage.setItem('token', response.token);
+        this.snackBar.open('Sesión iniciada correctamente', 'Cerrar', { duration: 2000 });
+        //redirigir al dashboard
+        this.router.navigate(['/admin/dashboard']);
+      },
+      //manejo de errores
+      error: (err) => { 
+        this.loading.set(false); 
+        this.snackBar.open(err.error?.message || 'Error de autenticación', 'Cerrar', { duration: 2000 });
+      },
+    });
   }
 }
