@@ -1,0 +1,143 @@
+.admin-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f4f9f4;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #081c15;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  &.collapsed {
+    width: 70px;
+
+    .sidebar-header {
+      justify-content: center;
+      padding: 0;
+    }
+  }
+
+  .sidebar-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    gap: 12px;
+
+    .brand-icon {
+      color: #52b788;
+      font-size: 28px;
+      height: 28px;
+      width: 28px;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      color: #ffffff;
+    }
+  }
+
+  .mat-mdc-nav-list {
+    padding-top: 16px;
+
+    .mat-mdc-list-item {
+      margin: 4px 8px;
+      border-radius: 8px;
+      color: #b7e4c7;
+      height: 48px;
+
+      .mat-icon {
+        color: #b7e4c7;
+      }
+
+      &:hover {
+        color: #ffffff;
+
+        .mat-icon {
+          color: #ffffff;
+        }
+      }
+
+      &.active-nav {
+        background-color: #2a5a46;
+        color: #ffffff;
+
+        .mat-icon {
+          color: #52b788;
+        }
+      }
+    }
+  }
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar.mat-toolbar {
+  background-color: #ffffff;
+  color: #daece4;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid rgba(45, 106, 79, 0.1);
+
+  .mat-mdc-icon-button {
+    color: #1b4332;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .user-info-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .user-details {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      .user-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1b4332;
+      }
+
+      .user-role {
+        font-size: 12px;
+        color: #40916c;
+      }
+    }
+
+    .logout-btn.mat-mdc-icon-button {
+      color: #2d6a4f;
+      background-color: rgba(45, 106, 79, 0.05);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #9d0208;
+      }
+    }
+  }
+}
+
+.content-area {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}

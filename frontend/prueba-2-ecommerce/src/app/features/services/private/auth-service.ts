@@ -38,10 +38,10 @@ export class AuthService {
           );
   }
 
-  logout(router: any) {
-      localStorage.removeItem(this.TOKEN_KEY);
-      this._token.set(null);
-      router.navigate(['/login']);
+  logout() {
+    localStorage.removeItem(this.TOKEN_KEY);
+    this._token.set(null);
+    this.router.navigate(['/login']);
   }
 
   getToken(): string | null {
