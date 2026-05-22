@@ -1,8 +1,9 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, Injectable, inject, signal } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { JwtPayload, LoginRequest, LoginResponse } from '../../interfaces/private/login-interface';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -10,21 +11,21 @@ import { tap } from 'rxjs';
 export class AuthService {
   private readonly API = environment.apiUrl;
   private readonly TOKEN_KEY = environment.tokenKey;
+  private readonly http = inject(HttpClient);
+  private readonly router = inject(Router);
 
   private _token = signal<string | null>(localStorage.getItem(this.TOKEN_KEY));
 
   isAuthenticated = computed(() => !!this._token());
   token = computed(() => this._token());
 
-  payload = computed< JwtPayload | null >(() => {
+  payload = computed<JwtPayload | null >(() => {
       const t = this._token();
       return t ? this.decodeToken(t) : null;
   });
 
   username = computed(() => this.payload()?.user ?? null);
   userId = computed(() => this.payload()?.sub ?? null);
-
-  constructor(private http: HttpClient) { }
 
   login(credentials: LoginRequest) {
       return this.http
