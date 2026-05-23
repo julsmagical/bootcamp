@@ -29,7 +29,8 @@ export class PrivateLayout {
 
   navItems: NavItem[] = [
     { icon: 'dashboard', label: 'Dashboard', route: '/admin/dashboard' },
-    { icon: 'inventory_2', label: 'Productos', route: '/admin/adminproducts' }
+    { icon: 'inventory_2', label: 'Productos', route: '/admin/adminproducts' },
+    { icon: 'cart-shopping', label: 'Carrito', route: '/admin/carts'}
   ];
 
   toggle() {

@@ -60,6 +60,11 @@ export const routes: Routes = [
                 loadComponent: () =>
                     import('./features/pages/private/product/product-page/product-page').then((m) => m.ProductPage),
             },
+            {
+                path: 'carts',
+                loadComponent: () =>
+                    import('./features/pages/private/cart-page/cart-page').then(m => m.CartPage)
+            }
         ],
     },
     {

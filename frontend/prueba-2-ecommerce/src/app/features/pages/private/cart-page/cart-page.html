@@ -1,0 +1,42 @@
+<div class="page-container">
+  <div class="page-header">
+    <h2>Carritos</h2>
+  </div>
+
+  <div class="table-wrapper">
+    <table mat-table [dataSource]="carts()">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let cart"> {{ cart.id }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="products">
+        <th mat-header-cell *matHeaderCellDef> Productos </th>
+        <td mat-cell *matCellDef="let cart"> {{ cart.totalProducts }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+        <td mat-cell *matCellDef="let cart"> {{ cart.totalQuantity }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Total </th>
+        <td mat-cell *matCellDef="let cart"> ${{ cart.total }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let cart">
+          <button mat-icon-button (click)="viewCart(cart.id)"><mat-icon>visibility</mat-icon></button>
+          <button mat-icon-button (click)="deleteCart(cart.id)"><mat-icon>delete</mat-icon></button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matHeaderRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  </div>
+</div>
