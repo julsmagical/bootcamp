@@ -1,1 +1,38 @@
-<p>dashboard-page works!</p>
+<div class="dashboard-container">
+  <header class="welcome-header">
+    <h1>Bienvenido de vuelta, <span>{{ currentUser() || 'Administrador' }}</span></h1>
+    <p>Este es tu panel de control administrativo resumido.</p>
+  </header>
+
+  <div class="info-grid">
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <div class="avatar-circle">
+          <mat-icon>admin_panel_settings</mat-icon>
+        </div>
+        <div class="profile-title">
+          <h3>Información de Cuenta</h3>
+          <span class="role-badge">Admin Global</span>
+        </div>
+      </mat-card-header>
+      
+      <mat-card-content class="profile-details">
+        <div class="detail-item">
+          <mat-icon>person</mat-icon>
+          <div>
+            <label>Usuario</label>
+            <p>{{ currentUser() || 'No asignado' }}</p>
+          </div>
+        </div>
+        
+        <div class="detail-item">
+          <mat-icon>verified_user</mat-icon>
+          <div>
+            <label>Estado de Sesión</label>
+            <p class="status-active">Conectado con Éxito</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
