@@ -1,0 +1,45 @@
+h2.mat-mdc-dialog-title {
+  color: #1b4332;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+
+  mat-form-field {
+    flex: 1;
+  }
+}
+
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-focus-outline-color: #1b4332;
+  --mdc-outlined-text-field-focus-label-text-color: #1b4332;
+}
+
+.cancel-btn {
+  color: #666666;
+}
+
+.save-btn.mat-mdc-flat-button {
+  background-color: #1b4332;
+  color: #ffffff;
+  border-radius: 6px;
+
+  &:hover:not([disabled]) {
+    background-color: #2d6a4f;
+  }
+}
